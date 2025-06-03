@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백엔드 개발자 포트폴리오</title>
+    <style>
+      /* 기본 다크모드 스타일 */
+      body {
+        margin: 0;
+        font-family: "Pretendard", sans-serif;
+        background-color: #121212;
+        color: #f0f0f0;
+        line-height: 1.6;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        background-color: #1e1e1e;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #fff;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .project-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .project-card {
+        background-color: #1f1f1f;
+        padding: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+        transition: background-color 0.3s;
+      }
+
+      .project-card:hover {
+        background-color: #2a2a2a;
+      }
+
+      /* 모달 스타일 */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: #222;
+        color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      a {
+        color: #66ccff;
+      }
+
+      @media (max-width: 600px) {
+        .project-card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>백엔드 개발자 포트폴리오</h1>
+      <p>Java | Spring | Oracle | Python | 프로젝트 중심 포트폴리오</p>
+    </header>
+
+    <section id="projects">
+      <h2>💻 프로젝트</h2>
+      <div class="project-list">
+        <div class="project-card" onclick="showModal('convenience')">
+          <h3>편의점 재고관리 시스템</h3>
+          <p>Python + Oracle</p>
+        </div>
+
+        <div class="project-card" onclick="showModal('portfolio')">
+          <h3>포트폴리오 웹사이트</h3>
+          <p>HTML + JS</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 개발자 [당신의 이름]</p>
+    </footer>
+
+    <!-- 모달 -->
+    <div id="modal" class="modal" onclick="hideModal()">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="hideModal()">✖</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <script>
+      const projectReadmes = {
+        convenience: `
+        <h2>편의점 재고관리 시스템</h2>
+        <p><strong>기술 스택:</strong> Python, Oracle, PyQt5</p>
+        <p><strong>설명:</strong> Oracle DB와 연동하여 편의점 물품 입출고 및 통계를 관리하는 데스크탑 애플리케이션입니다.</p>
+        <ul>
+          <li>로그인 기능 구현 (세션 유지)</li>
+          <li>재고 확인, 입출고, 검색, 통계 기능 포함</li>
+          <li>비로그인 시 접근 제한 및 경고창 구현</li>
+        </ul>
+      `,
+        portfolio: `
+        <h2>포트폴리오 웹사이트</h2>
+        <p><strong>기술 스택:</strong> HTML, CSS, JavaScript</p>
+        <p><strong>설명:</strong> 자신을 소개하고 프로젝트 상세 정보를 팝업 형태로 보여주는 다크모드 웹사이트입니다.</p>
+        <ul>
+          <li>다크모드 전체 적용</li>
+          <li>README 형식 정보 모달 팝업</li>
+          <li>반응형 레이아웃</li>
+        </ul>
+      `,
+      };
+
+      function showModal(projectKey) {
+        const modal = document.getElementById("modal");
+        const modalBody = document.getElementById("modal-body");
+        modalBody.innerHTML = projectReadmes[projectKey];
+        modal.style.display = "flex";
+      }
+
+      function hideModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
