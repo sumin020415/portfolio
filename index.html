@@ -68,6 +68,72 @@
         color: #aaa;
         background-color: #1a1a1a;
       }
+      .projects-card {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+      }
+
+      .projects-tag {
+        background-color: #ff6b6b;
+        color: white;
+        padding: 4px 10px;
+        font-size: 0.9em;
+        border-radius: 20px;
+        width: fit-content;
+      }
+
+      .projects-title {
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+
+      .projects-description {
+        font-weight: 600;
+        margin-top: 5px;
+      }
+
+      .projects-features {
+        margin-top: 5px;
+      }
+
+      .projects-features li {
+        margin-left: 20px;
+        list-style-type: disc;
+        font-size: 0.95em;
+      }
+
+      .projects-link {
+        color: #58a6ff;
+        text-decoration: none;
+        font-size: 0.95em;
+        margin-top: 5px;
+      }
+
+      .projects-badges {
+        margin-top: 10px;
+      }
+
+      .projects-button {
+        display: inline-block;
+        background-color: #333;
+        color: #f5f5f5;
+        padding: 6px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.85em;
+        margin-top: 10px;
+        border: 1px solid #aaa;
+      }
+
+      .projects-button:hover {
+        background-color: #444;
+      }
     </style>
   </head>
   <body>
@@ -145,19 +211,26 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="grid">
-        <div class="card">
+        <div class="projects-card">
           <h3>편의점 재고 관리 시스템</h3>
-          <p>
-            Python + Oracle 기반으로 구현한 편의점 재고 관리 시스템입니다.
-            로그인, 상품 관리, 통계 기능을 제공합니다.
-          </p>
-        </div>
-        <div class="card">
-          <h3>주유소 데이터 수집 및 분석</h3>
-          <p>
-            Selenium과 Pandas, HDFS를 활용하여 주유소 정보를 수집하고 분석한
-            프로젝트입니다.
-          </p>
+          <div class="projects-tag">자바과정 프로젝트1</div>
+          <div style="font-size: 0.9em; color: #ccc">2025.03 (4인)</div>
+          <div class="projects-description">편의점 재고관리 및 발주 시스템</div>
+          <ul class="projects-features">
+            <li>Python + Oracle 기반으로 구현한 편의점 재고 관리 시스템</li>
+            <li>로그인, 상품 관리, 발주창 등등</li>
+          </ul>
+          <a
+            href="https://github.com/sumin020415/-Inventory-management"
+            class="projects-link"
+            target="_blank"
+            >https://github.com/sumin020415/-Inventory-management</a
+          >
+          <div class="projects-badges">
+            <span class="badge">Python</span>
+            <span class="badge">Oracle</span>
+          </div>
+          <!-- <a href="#" class="projects-button">📄README</a> -->
         </div>
       </div>
     </section>
