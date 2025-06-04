@@ -61,6 +61,11 @@
         margin: 2px;
         font-size: 0.9em;
       }
+      .image {
+        width: 25px;
+        height: 100%;
+        vertical-align: middle;
+      }
       footer {
         text-align: center;
         padding: 20px;
@@ -135,24 +140,45 @@
         background-color: #444;
       }
     </style>
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new TypeIt("#typeit", {
+          speed: 50,
+          startDelay: 300,
+        })
+          .type(
+            "안녕하세요 :) Python, Java 기반의 서버 개발과 데이터 처리를 즐기는 백엔드 주니어 개발자 박수민입니다.",
+            { delay: 3000 }
+          )
+          // .move(-13, { delay: 1000 })
+          // .delete(1, { delay: 100 })
+          // .delete(1, { delay: 100 })
+          // .delete(1, { delay: 100 })
+          // .delete(1, { delay: 100 })
+          // .type("포트폴리오 사이트", { delay: 400 })
+          .go();
+      });
+    </script>
   </head>
   <body>
     <header>
       <h1>박수민 - 백엔드 개발자</h1>
-      <p>
+      <p id="typeit"></p>
+      <!-- <p>
         안녕하세요. Python, Java 기반의 서버 개발과 데이터 처리를 즐기는 백엔드
-        개발자 박수민입니다.
-      </p>
+        주니어 개발자 박수민입니다.
+      </p> -->
     </header>
 
     <section id="about">
       <h2>About Me</h2>
       <div class="grid">
         <div class="card">
-          <p><strong>이름:</strong> 박수민</p>
-          <p><strong>생년월일:</strong> 02.04.15</p>
-          <p><strong>이메일:</strong> sumini0759@gmail.com</p>
-          <p><strong>위치:</strong>부산시 해운대구</p>
+          <p><strong>이름 :</strong> 박수민</p>
+          <p><strong>생년월일 :</strong> 2002.04.15</p>
+          <p><strong>이메일 :</strong> sumini0759@gmail.com</p>
+          <p><strong>위치 :</strong> 부산시 해운대구</p>
         </div>
       </div>
     </section>
@@ -165,6 +191,9 @@
           <span class="badge">Python</span>
           <span class="badge">Java</span>
           <span class="badge">SQL</span>
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS</span>
+          <span class="badge">Jacascript</span>
         </div>
         <div class="card">
           <p><strong>Frameworks</strong></p>
@@ -213,7 +242,7 @@
       <div class="grid">
         <div class="projects-card">
           <h3>편의점 재고 관리 시스템</h3>
-          <div class="projects-tag">자바과정 프로젝트1</div>
+          <div class="projects-tag">자바과정 프로젝트 (1)</div>
           <div style="font-size: 0.9em; color: #ccc">2025.03 (4인)</div>
           <div class="projects-description">편의점 재고관리 및 발주 시스템</div>
           <ul class="projects-features">
@@ -230,9 +259,21 @@
             <span class="badge">Python</span>
             <span class="badge">Oracle</span>
           </div>
-          <!-- <a href="#" class="projects-button">📄README</a> -->
+          <a href="#" class="projects-button">📄README</a>
+          <!-- <a href="#" class="projects-button">image</a> -->
         </div>
       </div>
+      <!-- <div class="grid">
+        <div class="projects-card">
+          <h3>미정</h3>
+          <div class="projects-tag">자바과정 프로젝트 (2)</div>
+          <div style="font-size: 0.9em; color: #ccc">2025.06 (4~5인)</div>
+          <div class="projects-description">미정</div>
+          <ul class="projects-features">
+            <li>미정</li>
+            <li>미정</li>
+          </ul>
+      </div> -->
     </section>
 
     <footer>&copy; 2025 박수민. All rights reserved.</footer>
