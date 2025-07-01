@@ -3,308 +3,449 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>백엔드 개발자 포트폴리오 (수정중)</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Segoe UI", sans-serif;
-        background-color: #121212;
-        color: #f5f5f5;
-        line-height: 1.6;
-      }
-      header {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("header.jpg") no-repeat center center/cover;
-        padding: 100px 20px;
-        text-align: center;
-      }
-      header h1 {
-        font-size: 2.8em;
-        margin-bottom: 0.5em;
-      }
-      header p {
-        font-size: 1.2em;
-        opacity: 0.8;
-      }
-      section {
-        padding: 60px 20px;
-        max-width: 1000px;
-        margin: auto;
-      }
-      h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #ff6b6b;
-        display: inline-block;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-      }
-      .card {
-        background-color: #1e1e1e;
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      }
-      .badge {
-        display: inline-block;
-        background-color: #444;
-        color: #fff;
-        padding: 4px 8px;
-        border-radius: 5px;
-        margin: 2px;
-        font-size: 0.9em;
-      }
-      footer {
-        text-align: center;
-        padding: 20px;
-        font-size: 0.8em;
-        color: #aaa;
-        background-color: #1a1a1a;
-      }
-      .projects-card {
-        background-color: #1e1e1e;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        position: relative;
-      }
-
-      .projects-tag {
-        background-color: #ff6b6b;
-        color: white;
-        padding: 4px 10px;
-        font-size: 0.9em;
-        border-radius: 20px;
-        width: fit-content;
-      }
-
-      .projects-description {
-        font-weight: 600;
-        margin-top: 5px;
-      }
-
-      .projects-features {
-        margin-top: 5px;
-      }
-
-      .projects-features li {
-        margin-left: 20px;
-        list-style-type: disc;
-        font-size: 0.95em;
-      }
-
-      .projects-link {
-        color: #58a6ff;
-        text-decoration: none;
-        font-size: 0.95em;
-        margin-top: 5px;
-      }
-
-      .projects-badges {
-        margin-top: 10px;
-      }
-
-      .projects-button {
-        display: inline-block;
-        background-color: #333;
-        color: #f5f5f5;
-        padding: 6px 10px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 0.85em;
-        margin-top: 10px;
-        border: 1px solid #aaa;
-      }
-
-      .projects-button:hover {
-        background-color: #444;
-      }
-    </style>
+    <title>백엔드 개발자 포트폴리오</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        new TypeIt("#typeit", {
-          speed: 50,
-          startDelay: 300,
-        })
-          .type(
-            "안녕하세요 :) Python, Java 기반의 서버 개발과 데이터 처리를 즐기는 백엔드 주니어 개발자 박수민입니다.",
-            { delay: 3000 }
-          )
-          // .move(-13, { delay: 1000 })
-          // .delete(1, { delay: 100 })
-          // .delete(1, { delay: 100 })
-          // .delete(1, { delay: 100 })
-          // .delete(1, { delay: 100 })
-          // .type("포트폴리오 사이트", { delay: 400 })
-          .go();
-      });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+    <script src="script.js" defer></script>
   </head>
+
   <body>
-    <header>
-      <h1>박수민 - 백엔드 개발자</h1>
-      <p id="typeit"></p>
-      <!-- <p>
-        안녕하세요. Python, Java 기반의 서버 개발과 데이터 처리를 즐기는 백엔드
-        주니어 개발자 박수민입니다.
-      </p> -->
-    </header>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="grid">
-        <div class="card">
-          <p><strong>이름 :</strong> 박수민</p>
-          <p><strong>생년월일 :</strong> 2002.04.15</p>
-          <p><strong>이메일 :</strong> sumin0759@gmail.com</p>
-          <p><strong>위치 :</strong> 부산시 해운대구</p>
-        </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-left">
+        Sumin’s <span style="color: var(--accent)">Portfolio</span>
       </div>
-    </section>
-
-    <section id="Interview">
-      <h2>Interview</h2>
-      <div class="Interview">
-        <div class="card">
-          <p><strong>Q. 자기계발을 위해 어떤 것들을 해왔는지?</strong></br> .</p>
-        </div>
-        <div class="card">
-          <p><strong>Q. 일에 있어 가장 중요하게 생각하는 것이 있다면?</strong></br> .</p>
-        </div>
+      <div class="nav-center">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#interview">Interview</a></li>
+          <li><a href="#certificate">Certificate</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#archiving">Archiving</a></li>
+        </ul>
       </div>
-    </section>
-
-    <section id="Certificate">
-      <h2>Certificate</h2>
-      <div class="Certificate">
-        <div class="card">
-          <p><strong>정보처리기사 필기</strong> (2025.06)</p>
-          <p><strong>Google Analytics</strong> (2025.05)</p>
-          <p><strong>매경테스트 보통</strong> (2023.08)</p>
-          <p><strong>운전면허 2종 보통</strong> (2021.08)</p>
-          <p><strong>전자기능사</strong> (2020.08)</p>
-          <p><strong>ITQ 파워포인트</strong> (2018.12)</p>
-          <p><strong>ITQ 한글</strong> (2018.08)</p>
-        </div>
+      <div class="nav-right">
+        <button id="download-pdf" class="nav-icon-button">📄</button>
+        <button id="theme-toggle" class="nav-icon-button">🌙</button>
       </div>
-    </section>
+    </nav>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="grid">
-        <div class="card">
-          <p><strong>Languages</strong></p>
-          <span class="badge">Python</span>
-          <span class="badge">Java</span>
-          <span class="badge">SQL</span>
-          <span class="badge">HTML5</span>
-          <span class="badge">CSS</span>
-          <span class="badge">Jacascript</span>
-        </div>
-        <div class="card">
-          <p><strong>Frameworks</strong></p>
-          <span class="badge">Spring</span>
-          <span class="badge">Springboot</span>
-          <span class="badge">React</span>
-          <span class="badge">Vite.js</span>
-          <span class="badge">babel</span>
-          <span class="badge">Vue</span>
-        </div>
-        <div class="card">
-          <p><strong>Tools & DB</strong></p>
-          <span class="badge">Oracle</span>
-          <span class="badge">MySQL</span>
-          <span class="badge">MongoDB</span>
-          <span class="badge">Google Analytics</span>
-          <span class="badge">Docker, Docker-Compose</span>
-          <span class="badge">GitHub</span>
-          <span class="badge">Linux</span>
-          <span class="badge">Notion</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="archiving">
-      <h2>Archiving</h2>
-      <div class="grid">
-        <div class="card">
-          <p>
-            <strong>GitHub</strong><br />
-            <a
-              href="https://github.com/sumin020415"
-              target="_blank"
-              style="color: #ff6b6b"
-              >https://github.com/sumin020415</a><br><br>
-              - 코딩 연습을 위해 작업한 코드와 프로젝트의 소스 코드가 있습니다.
-              
-          </p>
-        </div>
-        <div class="card">
-          <p>
-            <strong>Notion</strong><br />
-            <a
-              href="https://rare-mountain-b86.notion.site/20da450b75e18047a530ea706ef4c93a?source=copy_link"
-              target="_blank"
-              style="color: #ff6b6b"
-              >https://www.notion.com/ko</a><br><br>
-              - 공부한 내용들이 기록되어 있습니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="projects-card">
-          <h3>편의점 재고 관리 시스템</h3>
-          <div class="projects-tag">자바과정 프로젝트 (1)</div>
-          <div style="font-size: 0.9em; color: #ccc">2025.03 (4인)</div>
-          <div class="projects-description">편의점 재고관리 및 발주 시스템</div>
-          <ul class="projects-features">
-            <li>Python + Oracle 기반으로 구현한 편의점 재고 관리 시스템</li>
-            <li>로그인, 재고관리, 발주, 판매, 배달기사용 창 구현</li>
-          </ul>
-          <div class="projects-badges">
-            <span class="badge">Python</span>
-            <span class="badge">Oracle</span>
-            <span class="badge">PyQt5</span>
-            <span class="badge">Pandas</span>
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <header></header>
+        <section id="about" class="card">
+          <h2>About Me</h2>
+          <div class="about-container">
+            <img src="img/profile.jpg" alt="프로필 사진" class="profile-img" />
+            <div class="about-info">
+              <p><strong>이름 :</strong> 박수민</p>
+              <p><strong>생년월일 :</strong> 2002‑04‑15</p>
+              <p><strong>이메일 :</strong> sumin0759@gmail.com</p>
+              <p><strong>위치 :</strong> 부산시 해운대구</p>
+              <p><strong>포지션 :</strong> 백엔드 주니어 개발자</p>
+            </div>
           </div>
-          <a
-            target="_blank"
-            class="projects-button"
-            href="https://rare-mountain-b86.notion.site/20da450b75e1814fba84dba0166509f4"
-            >자세히 보기</a
-          >
-        </div>
-      </div>
+          <p class="about-summary">
+            기초부터 프로젝트까지 꾸준히 쌓아온 개발 경험을 바탕으로, 협업과 기록을 중요시하며 성장하는 백엔드 개발자를 지향합니다.
+          </p>
+          <br />
+          <p id="typeit"></p>
+        </section>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Interview -->
+        <section id="interview" class="card">
+          <h2>Interview</h2>
+          <div>
+            <strong>Q. 개발자로 성장하기 위해 어떤 노력을 해왔나요?</strong>
+            <p>
+              기초 문법 학습을 넘어서, 실제 동작하는 시스템을 만들며 익혔습니다.<br />
+              작은 프로젝트를 직접 설계하고 개발하면서 문제 해결 역량을 키워왔습니다.<br />
+              또한 기술 블로그와 GitHub를 통해 작업물을 정리하며 기록 습관을 기르고 있습니다.
+            </p>
+            <br /><br />
+          </div>
+
+          <div>
+            <strong>Q. 평소에 어떤 방식으로 공부하거나 기록하나요?</strong>
+            <p>
+              기억보다 기록을 중요하게 여기며, Notion에 요약하고 직접 코드를 실험합니다.<br />
+              핵심은 “내 언어로 설명할 수 있을 때까지” 학습하고 정리하는 것입니다.
+            </p>
+            <br /><br />
+          </div>
+
+          <div>
+            <strong>Q. 개발자로서 가장 중요하게 생각하는 가치는?</strong>
+            <p>
+              문제 해결 중심의 사고방식과, 협업에서 신뢰받는 태도를 가장 중요하게 생각합니다.<br />
+              기능 구현보다 '왜 이 기능이 필요한가'에 대한 질문을 놓치지 않으려 합니다.
+            </p>
+            <br /><br />
+          </div>
+
+          <div>
+            <strong>Q. 앞으로 어떤 개발자가 되고 싶나요?</strong>
+            <p>
+              백엔드 중심의 풀스택 개발자로 성장하고 싶습니다.<br />
+              단기 성과보다 지속 가능한 코드와 구조를 만들 줄 아는 개발자가 되는 것이 목표입니다.
+            </p>
+          </div>
+        </section>
+
+        <!-- Certificate -->
+        <section id="certificate" class="card">
+          <h2>Certificate</h2>
+          <ul>
+            <li><strong>정보처리기사 필기</strong> (2025.06)</li>
+            <li><strong>Google Analytics</strong> (2025.05)</li>
+            <li><strong>매경테스트 보통</strong> (2023.08)</li>
+            <li><strong>운전면허 2종 보통</strong> (2021.08)</li>
+            <li><strong>전자기능사</strong> (2020.08)</li>
+            <li><strong>ITQ 파워포인트</strong> (2018.12)</li>
+            <li><strong>ITQ 한글</strong> (2018.08)</li>
+          </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="card">
+          <h2>Skills</h2>
+          <div class="tech-tabs">
+            <div class="tab-buttons">
+              <button class="tab-btn" data-cat="Frontend">Frontend</button>
+              <button class="tab-btn" data-cat="Backend">Backend</button>
+              <button class="tab-btn" data-cat="Database">Database</button>
+              <button class="tab-btn" data-cat="DevOpsTools">DevOps / Tools</button>
+              <button class="tab-btn" data-cat="DataML">Data / ML</button>
+              <button class="tab-btn" data-cat="CollabDesign">Collab / Design</button>
+            </div>
+          </div>
+
+          <div class="skill-grid">
+            <!-- Frontend -->
+            <div class="skill-card" data-cat="Frontend">
+              <img src="img/skills/icons8-html-48.png" /><span>HTML5</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="img/skills/icons8-css-48.png" /><span>CSS3</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="img/skills/icons8-js-48.png" /><span>JavaScript</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="img/skills/icons8-typescript-48.png" /><span
+                >TypeScript</span
+              >
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="img/skills/icons8-react-24.png" /><span>React</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="img/skills/icons8-vue-js-48.png" /><span>Vue.js</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="img/skills/icons8-vite-48.png" /><span>Vite</span>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-card" data-cat="Backend">
+              <img src="img/skills/icons8-nodejs-48.png" /><span>Node.js</span>
+            </div>
+            <div class="skill-card" data-cat="Backend">
+              <img src="img/skills/icons8-spring-boot-48.png" /><span
+                >Spring Boot</span
+              >
+            </div>
+            <div class="skill-card" data-cat="Backend">
+              <img src="img/skills/icons8-java-48.png" /><span>Java</span>
+            </div>
+            <div class="skill-card" data-cat="Backend">
+              <img src="img/skills/icons8-python-48.png" /><span>Python</span>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-card" data-cat="Database">
+              <img src="img/skills/icons8-mysql-48.png" /><span>MySQL</span>
+            </div>
+            <div class="skill-card" data-cat="Database">
+              <img src="img/skills/icons8-mongo-db-48.png" /><span
+                >MongoDB</span
+              >
+            </div>
+            <div class="skill-card" data-cat="Database">
+              <img src="img/skills/icons8-oracle-logo-48.png" /><span
+                >Oracle</span
+              >
+            </div>
+
+            <!-- DevOps / Tools -->
+            <div class="skill-card" data-cat="DevOpsTools">
+              <img src="img/skills/icons8-docker-48.png" /><span>Docker</span>
+            </div>
+            <div class="skill-card" data-cat="DevOpsTools">
+              <img src="img/skills/icons8-github-64.png" /><span>GitHub</span>
+            </div>
+            <div class="skill-card" data-cat="DevOpsTools">
+              <img src="img/skills/icons8-git-48.png" /><span>Git</span>
+            </div>
+            <div class="skill-card" data-cat="DevOpsTools">
+              <img src="img/skills/icons8-vs-code-48.png" /><span>VS Code</span>
+            </div>
+            <div class="skill-card" data-cat="DevOpsTools">
+              <img src="img/skills/icons8-linux-48.png" /><span>Linux</span>
+            </div>
+            <div class="skill-card" data-cat="DevOpsTools">
+              <img src="img/skills/icons8-npm-48.png" /><span>npm</span>
+            </div>
+
+            <!-- Data / ML -->
+            <div class="skill-card" data-cat="DataML">
+              <img src="img/skills/icons8-pandas-48.png" /><span>Pandas</span>
+            </div>
+            <div class="skill-card" data-cat="DataML">
+              <img src="img/skills/icons8-numpy-48.png" /><span>NumPy</span>
+            </div>
+
+            <!-- Collaboration / Design -->
+            <div class="skill-card" data-cat="CollabDesign">
+              <img src="img/skills/icons8-notion-64.png" /><span>Notion</span>
+            </div>
+            <div class="skill-card" data-cat="CollabDesign">
+              <img src="img/skills/icons8-figma-48.png" /><span>Figma</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="card">
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+            <!-- 자바과정 프로젝트 1 -->
+            <div class="projects-card">
+                <div class="projects-tag">자바과정 프로젝트 (1)</div>
+                <h3>편의점 재고 관리 시스템</h3>
+                <div class="projects-description">
+                    Python + Oracle 기반의 재고관리 시스템.<br />
+                    로그인, 재고/발주 기능 포함.
+                </div>
+                <div class="projects-badges">
+                    <span class="badge">Python</span>
+                    <span class="badge">Oracle</span>
+                    <span class="badge">PyQt5</span>
+                </div>
+                <div class="projects-actions">
+                    <a
+                    class="projects-button"
+                    href="https://rare-mountain-b86.notion.site/20da450b75e1814fba84dba0166509f4"
+                    >자세히 보기</a
+                    >
+                    <button class="projects-button" onclick="openImageModal('img/project1.jpg')">이미지</button>
+                </div>
+            </div>
+
+            <!-- 자바과정 프로젝트 2 -->
+            <div class="projects-card">
+                <div class="projects-tag">자바과정 프로젝트 (2)</div>
+                <h3>보안등/CCTV/제보 소통 게시판 사이트 개발</h3>
+                <div class="projects-description">
+                    지도 API를 활용한 위치 기반 제보 등록<br />
+                    위치 기반 제보글 작성 및 좋아요/싫어요
+                </div>
+                <div class="projects-badges">
+                    <span class="badge">Java</span>
+                    <span class="badge">Spring Boot</span>
+                    <span class="badge">Oracle</span>
+                    <span class="badge">React</span>
+                    <span class="badge">Kakao Map API</span>
+                </div>
+                <div class="projects-actions">
+                    <a
+                    class="projects-button"
+                    href="https://rare-mountain-b86.notion.site/213a450b75e1801ca61af690bec2a6dc"
+                    >자세히 보기</a
+                    >
+                    <button
+                    class="projects-button"
+                    onclick="openVideoModal('videos/project2.mp4')"
+                    >
+                    영상보기
+                    </button>
+                </div>
+            </div>
+
+            <!-- 개인 프로젝트 1 -->
+            <div class="projects-card">
+                <div class="projects-tag">개인 프로젝트</div>
+                <h3>데이터 분석 모음</h3>
+                <div class="projects-description">
+                    Pandas, Seaborn, Matplotlib 기반 시각화 및 통계분석
+                </div>
+                <div class="projects-badges">
+                    <span class="badge">Python</span>
+                    <span class="badge">Pandas</span>
+                    <span class="badge">Seaborn</span>
+                </div>
+                <div class="projects-actions">
+                    <button
+                    class="projects-button"
+                    onclick="openBookModal('analysis')"
+                    >
+                    📖 Book
+                    </button>
+                </div>
+            </div>
+
+            <!-- 개인 프로젝트 2 -->
+            <div class="projects-card">
+                <div class="projects-tag">개인 프로젝트</div>
+                <h3>웹 크롤링 모음</h3>
+                <div class="projects-description">
+                    Selenium, Requests, BeautifulSoup를 활용한 데이터 수집
+                </div>
+                <div class="projects-badges">
+                    <span class="badge">Python</span>
+                    <span class="badge">Selenium</span>
+                    <span class="badge">BeautifulSoup</span>
+                </div>
+                <div class="projects-actions">
+                    <button
+                    class="projects-button"
+                    onclick="openBookModal('crawling')"
+                    >
+                    📖 Book
+                    </button>
+                </div>
+            </div>
+        </div> 
     </section>
 
-    <section id="Study">
-      <h2>Study</h2>
-      <div class="Study">
-        <div class="card">
-          <p><strong>크롤링</strong></br> .</p>
-        </div>
-        <div class="card">
-          <p><strong>Docker</strong></br> .</p>
-        </div>
-      </div>
-    </section>
+        <!-- Archiving -->
+        <section id="archiving" class="card">
+          <h2>Archiving</h2>
+          <div class="archiving-container">
+            <a href="https://github.com/sumin020415" class="archiving-item" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+              <span>GitHub</span>
+            </a>
+            <a href="https://rare-mountain-b86.notion.site/20da450b75e18047a530ea706ef4c93a?pvs=74" class="archiving-item" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion" />
+              <span>Notion</span>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
 
-    <footer>&copy; 2025 박수민. All rights reserved.</footer>
+       <!-- ──────────────────── Video Modal ──────────────────── -->
+        <div id="videoModal" class="modal">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeVideoModal()">×</span>
+            <video id="videoPlayer" muted controls preload="metadata">
+            <source src="videos/project2.mp4" type="video/mp4" />
+            브라우저가 video를 지원하지 않습니다.
+            </video>
+        </div>
+        </div>
+
+        <!-- ──────────────────── Image Modal ──────────────────── -->
+        <div id="imageModal" class="modal">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeImageModal()">×</span>
+            <button class="nav prev"  onclick="prevImage()">‹</button>
+            <img id="imageViewer" src="" alt="viewer" />
+            <button class="nav next"  onclick="nextImage()">›</button>
+        </div>
+        </div>
+
+        <!-- ──────────────────── Book-Viewer Modal ──────────────────── -->
+        <div id="book-modal" class="modal">
+            <div class="modal-box book-box">
+            <span class="modal-close" onclick="closeBook()">×</span>
+            <span class="modal-back"  onclick="backToList()">← 목록으로</span>
+
+      <h3 id="book-title" class="book-title"></h3>
+
+            <!-- 책 목록 패널 -->
+        <div id="book-selector">
+        <div class="book-grid">
+
+            <!-- 분석 -->
+            <div class="book-card" data-category="analysis" onclick="loadBook('청소년정신건강')">
+            <div class="book-cover">청소년정신건강</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('교통사고 분석')">
+            <div class="book-cover">교통사고 분석</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('지하철 이용현황')">
+            <div class="book-cover">지하철 이용현황</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('인천공항 이용자수')">
+            <div class="book-cover">인천공항 이용자수</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('연령별 취업자수')">
+            <div class="book-cover">연령별 취업자수</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('연령별 인구 분포 분석')">
+            <div class="book-cover">연령별 인구 분포 분석</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('쇼핑몰 시각화')">
+            <div class="book-cover">쇼핑몰 시각화</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('CCTV 위치분석')">
+            <div class="book-cover">CCTV 위치분석</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('교통사고유형별발생')">
+            <div class="book-cover">교통사고유형별발생</div>
+            </div>
+            <div class="book-card" data-category="analysis" onclick="loadBook('공간정보')">
+            <div class="book-cover">공간정보</div>
+            </div>
+
+            <!-- 크롤링 -->
+            <div class="book-card" data-category="crawling" onclick="loadBook('셀레니움1')">
+            <div class="book-cover">셀레니움1</div>
+            </div>
+            <div class="book-card" data-category="crawling" onclick="loadBook('셀레니움2')">
+            <div class="book-cover">셀레니움2</div>
+            </div>
+            <div class="book-card" data-category="crawling" onclick="loadBook('셀레니움3')">
+            <div class="book-cover">셀레니움3</div>
+            </div>
+            <div class="book-card" data-category="crawling" onclick="loadBook('크롤링_스타벅스')">
+            <div class="book-cover">크롤링_스타벅스</div>
+            </div>
+            <div class="book-card" data-category="crawling" onclick="loadBook('인스타크롤링')">
+            <div class="book-cover">인스타크롤링</div>
+            </div>
+            <div class="book-card" data-category="crawling" onclick="loadBook('주유소크롤링1')">
+            <div class="book-cover">주유소크롤링1</div>
+            </div>
+            <div class="book-card" data-category="crawling" onclick="loadBook('주유소크롤링2')">
+            <div class="book-cover">주유소크롤링2</div>
+            </div>
+            <div class="book-card" data-category="crawling" onclick="loadBook('최저가주유')">
+            <div class="book-cover">최저가주유</div>
+            </div>
+
+        </div>
+        </div>
+
+
+            <!-- 실제 페이지 표시 영역 -->
+            <div id="flipbook" class="flipbook"></div>
+
+            <!-- 페이지 네비 -->
+            <button class="nav prev" onclick="prevPage()">‹</button>
+            <button class="nav next" onclick="nextPage()">›</button>
+            <span class="page-number"></span>
+        </div>
+    </div>
   </body>
 </html>
