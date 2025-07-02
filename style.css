@@ -619,12 +619,12 @@ video{
   transform:translateY(-50%);
   background:rgba(0,0,0,0.45);
 }
-@media(max-width:768px){
+/* @media(max-width:768px){
   #book-modal .book-box{
     width:95vw;
     padding:24px 20px;
-  }
-}
+  } 
+} */
 .close{
   position:absolute;
   top:12px;
@@ -674,7 +674,7 @@ footer{
   background-color:#1a1a1a;
   margin-top:40px;
 }
-@media(max-width:768px){
+/* @media(max-width:768px){
   .layout{
     flex-direction:column;
   }
@@ -703,7 +703,7 @@ footer{
     flex-direction:column;
     gap:10px;
   }
-}
+} */
 @media print {
   body {
     background: #fff !important;
@@ -759,5 +759,165 @@ footer{
 
   .page-break {
     page-break-before: always;
+  }
+}
+
+@media (max-width: 768px){
+
+  html {
+    font-size: 15px;
+  }
+
+  body, p, span, h1, h2, h3, h4, h5, h6 {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    line-height: 1.6;
+  }
+
+  #typeit, .card p, .card h3, .card li, .card span {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    line-height: 1.6;
+  }
+
+  .layout {
+    flex-direction: column !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    padding: 24px 16px !important;
+    background-color: #111 !important;
+    text-align: center !important;
+  }
+
+  .profile-img {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0 auto 12px !important;
+  }
+
+  .main {
+    padding: 16px 12px 80px !important;
+    width: 100% !important;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 24px !important;
+    padding: 20px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .card h3 {
+    font-size: 1.1rem !important;
+    text-align: center !important;
+    margin-bottom: 8px !important;
+  }
+
+  .card ul {
+    padding-left: 20px !important;
+    list-style-position: inside !important;
+  }
+
+  .card ul li {
+    word-break: break-word !important;
+    white-space: normal !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .navbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 10px 16px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .nav-menu {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 12px !important;
+    padding-top: 10px !important;
+  }
+
+  .nav-menu li {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 10px 0 !important;
+  }
+
+  .tab-buttons {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+
+  .tab-btn {
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .skill-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    font-size: 0.75rem !important;
+  }
+
+  .skill-card img {
+    width: 32px !important;
+    height: 32px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .projects-card {
+    padding: 16px 12px !important;
+  }
+
+  .certificate-section h3,
+  .interview-section h3 {
+    font-size: 1rem !important;
+    text-align: center !important;
+  }
+
+  .certificate-section li,
+  .interview-section li {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .archiving-container {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .archiving-item {
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+
+  .interview-section,
+  .certificate-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    display: block !important;
   }
 }
