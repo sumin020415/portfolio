@@ -143,19 +143,19 @@ document.addEventListener('DOMContentLoaded', () => {
       '연령별 취업자수':  Array.from({ length: 9  }, (_, i) => `img/book/연령별-취업자수/연령별 취업자수_page-${String(i + 1).padStart(4, '0')}.jpg`),
       '연령별 인구 분포 분석': Array.from({ length: 19 }, (_, i) => `img/book/연령별-인구-분포-분석/연령별 인구 분포 분석_page-${String(i + 1).padStart(4, '0')}.jpg`),
       '쇼핑몰 시각화':   Array.from({ length: 5  }, (_, i) => `img/book/쇼핑몰-시각화/쇼핑몰 시각화_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      'CCTV 위치분석':   Array.from({ length: 15 }, (_, i) => `img/book/범행CCTV인구데이터분석/범행CCTV인구데이터분석_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '방범용CCTV인구데이터분석':   Array.from({ length: 15 }, (_, i) => `img/book/방범용CCTV인구데이터분석/방범용CCTV인구데이터분석_page-${String(i + 1).padStart(4, '0')}.jpg`),
       '교통사고유형별발생': Array.from({ length: 20 }, (_, i) => `img/book/교통사고유형별발생/교통사고유형별발생_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '팀문화분석':      Array.from({ length: 9  }, (_, i) => `img/book/팀문화분석seaborn/팀문화분석(seaborn)_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '팁문화분석':      Array.from({ length: 9  }, (_, i) => `img/book/팁문화분석seaborn/팁문화분석(seaborn)_page-${String(i + 1).padStart(4, '0')}.jpg`),
       '공간정보':        Array.from({ length: 5  }, (_, i) => `img/book/공간정보/공간정보_page-${String(i + 1).padStart(4, '0')}.jpg`)
     },
     crawling: {
       '셀레니움1':     Array.from({ length: 9  }, (_, i) => `img/book/셀레니움크롤링/셀레니움크롤링_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '셀레니움2':     Array.from({ length: 15 }, (_, i) => `img/book/셀레니움크롤링2/셀레니움크롤링2_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '셀레니움3':     Array.from({ length: 21 }, (_, i) => `img/book/셀레니움크롤링3/셀레니움크롤링3_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '크롤링_스타벅스': Array.from({ length: 21 }, (_, i) => `img/book/크롤링-스타벅스/크롤링 스타벅스_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '셀레니움2':     Array.from({ length: 2 }, (_, i) => `img/book/셀레니움크롤링/셀레니움크롤링2_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '셀레니움3':     Array.from({ length: 21 }, (_, i) => `img/book/셀레니움크롤링/셀레니움크롤링3_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '스타벅스크롤링': Array.from({ length: 21 }, (_, i) => `img/book/크롤링-스타벅스/크롤링 스타벅스_page-${String(i + 1).padStart(4, '0')}.jpg`),
       '인스타크롤링':   Array.from({ length: 11 }, (_, i) => `img/book/인스타크롤링/인스타크롤링_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '주유소크롤링1':  Array.from({ length: 6  }, (_, i) => `img/book/주유소크롤링1/주유소크롤링1_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '주유소크롤링2':  Array.from({ length: 8  }, (_, i) => `img/book/주유소크롤링2/주유소크롤링2_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '주유소크롤링1':  Array.from({ length: 4  }, (_, i) => `img/book/주유소크롤링/주유소크롤링1_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '주유소크롤링2':  Array.from({ length: 8  }, (_, i) => `img/book/주유소크롤링/주유소크롤링2_page-${String(i + 1).padStart(4, '0')}.jpg`),
       '최저가주유':     Array.from({ length: 30 }, (_, i) => `img/book/최저가주유/최저가주유_page-${String(i + 1).padStart(4, '0')}.jpg`)
     }
   };
@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     flipbook   .style.display = 'flex';
     titleEl    .textContent   = title;
     titleEl    .style.display = 'block';
+    titleEl.style.writingMode  = 'horizontal-tb';
     pageNumEl  .style.display = 'block';
     pageNumEl  .textContent   = `1 / ${pageArr.length}`;
   };
