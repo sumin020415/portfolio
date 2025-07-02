@@ -774,145 +774,121 @@ footer{
     line-height: 1.6;
   }
 
-  #typeit, .card p, .card h3, .card li, .card span {
-    word-break: keep-all !important;
-    white-space: normal !important;
-    line-height: 1.6;
-  }
-
   .layout {
     flex-direction: column;
     padding: 0 12px;
+    gap: 24px;
   }
 
   .sidebar {
-    position: relative;
     width: 100%;
-    height: auto;
-    padding: 24px 16px;
     background-color: #111;
     text-align: center;
+    padding: 24px 16px;
+    border-radius: 8px;
   }
 
   .profile-img {
-    width: 140px;
-    height: auto;
-    border-radius: 16px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
     object-fit: cover;
-    object-position: center top;
     margin: 0 auto 16px;
     display: block;
   }
 
+  .main {
+    width: 100%;
+    padding: 0 12px 60px;
+    box-sizing: border-box;
+  }
+
   .card {
-    padding: 20px 16px;
-    margin: 16px auto;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 28px;
+    padding: 20px 16px;
     border-radius: 12px;
+    box-sizing: border-box;
   }
 
   .card h3 {
     font-size: 1.1rem;
-    margin-bottom: 12px;
     text-align: center;
+    margin-bottom: 12px;
   }
 
-  .card ul {
-    padding-left: 16px;
-    list-style-position: inside;
-    word-break: break-word;
-  }
-
-  .card ul li {
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-break: keep-all;
-    line-height: 1.5;
+  .card p, .card li, .card span {
     font-size: 0.9rem;
-  }
-
-  .main {
-    padding: 0 12px 80px;
-    width: 100%;
+    line-height: 1.6;
   }
 
   .skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 12px;
-    justify-content: center;
+    justify-items: center;
   }
 
   .skill-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 
   .skill-card img {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     margin-bottom: 4px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .projects-card {
-    padding: 16px 12px;
-  }
-
-  .navbar {
-    padding: 10px 16px;
-    font-size: 0.9rem;
   }
 
   .nav-menu {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    gap: 12px;
+    gap: 10px;
+    padding: 12px 0;
   }
 
   .nav-menu li {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+    font-size: 0.95rem;
+    padding: 6px 0;
+  }
+
+  .projects-card {
+    padding: 16px;
+    font-size: 0.85rem;
   }
 
   .tab-buttons {
     flex-wrap: wrap;
-    gap: 8px;
     justify-content: center;
+    gap: 8px;
   }
 
   .tab-btn {
-    padding: 6px 12px;
     font-size: 0.8rem;
+    padding: 6px 12px;
     white-space: nowrap;
   }
 
   .certificate-section h3,
   .interview-section h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
+    margin-bottom: 12px;
   }
 
   .certificate-section li,
   .interview-section li {
     font-size: 0.85rem;
     line-height: 1.5;
+    margin-bottom: 4px;
   }
 
   .interview-section,
   .certificate-section {
     width: 100%;
-    max-width: 100%;
     overflow: visible;
     display: block !important;
   }
