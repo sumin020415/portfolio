@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>백엔드 개발자 포트폴리오</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>박수민 - 풀스택 개발자 포트폴리오</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/print.css" />
     <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
     <script src="script.js" defer></script>
   </head>
 
@@ -28,8 +30,8 @@
         </ul>
       </div>
       <div class="nav-right">
-        <button id="download-pdf" class="nav-icon-button">📄</button>
-        <button id="theme-toggle" class="nav-icon-button">🌙</button>
+        <button id="download-pdf" class="nav-icon-button" type="button" aria-label="PDF로 인쇄/저장">📄</button>
+        <button id="theme-toggle" class="nav-icon-button" type="button" aria-label="다크/라이트 테마 전환">🌙</button>
       </div>
     </nav>
 
@@ -40,17 +42,17 @@
         <section id="about" class="card">
           <h2>About Me</h2>
           <div class="about-container">
-            <img src="img/profile.jpg" alt="프로필 사진" class="profile-img" />
+            <img src="img/프로필 그림버전.png" alt="프로필 사진" class="profile-img" />
             <div class="about-info">
               <p><strong>이름 :</strong> 박수민</p>
-              <p><strong>생년월일 :</strong> 2002‑04‑15</p>
-              <p><strong>이메일 :</strong> sumin0759@gmail.com</p>
+              <p><strong>생년월일 :</strong> 2002-04-15</p>
+              <p><strong>이메일 :</strong> sumin0759@kakao.com</p>
               <p><strong>위치 :</strong> 부산시 해운대구</p>
-              <p><strong>포지션 :</strong> 백엔드 주니어 개발자</p>
+              <p><strong>포지션 :</strong> 풀스택 개발자</p>
             </div>
           </div>
           <p class="about-summary">
-            기초부터 프로젝트까지 꾸준히 쌓아온 개발 경험을 바탕으로, 협업과 기록을 중요시하며 성장하는 백엔드 개발자를 지향합니다.
+            기초부터 프로젝트까지 꾸준히 쌓아온 개발 경험을 바탕으로, 협업과 기록을 중요시하며 성장하는 개발자입니다.
           </p>
           <br />
           <p id="typeit"></p>
@@ -62,39 +64,36 @@
         <!-- Interview -->
         <section id="interview" class="card">
           <h2>Interview</h2>
-          <div>
+          <div class="qa">
             <strong>Q. 개발자로 성장하기 위해 어떤 노력을 해왔나요?</strong>
             <p>
               기초 문법 학습을 넘어서, 실제 동작하는 시스템을 만들며 익혔습니다.<br />
               작은 프로젝트를 직접 설계하고 개발하면서 문제 해결 역량을 키워왔습니다.<br />
               또한 기술 블로그와 GitHub를 통해 작업물을 정리하며 기록 습관을 기르고 있습니다.
             </p>
-            <br /><br />
           </div>
 
-          <div>
+          <div class="qa">
             <strong>Q. 평소에 어떤 방식으로 공부하거나 기록하나요?</strong>
             <p>
               기억보다 기록을 중요하게 여기며, Notion에 요약하고 직접 코드를 실험합니다.<br />
               핵심은 “내 언어로 설명할 수 있을 때까지” 학습하고 정리하는 것입니다.
             </p>
-            <br /><br />
           </div>
 
-          <div>
+          <div class="qa">
             <strong>Q. 개발자로서 가장 중요하게 생각하는 가치는?</strong>
             <p>
               문제 해결 중심의 사고방식과, 협업에서 신뢰받는 태도를 가장 중요하게 생각합니다.<br />
-              기능 구현보다 '왜 이 기능이 필요한가'에 대한 질문을 놓치지 않으려 합니다.
+              기능 구현 이전에 '왜 이 기능이 필요한가'를 먼저 정의하고, 사용자 관점에서 우선순위를 판단합니다.
             </p>
-            <br /><br />
           </div>
 
-          <div>
+          <div class="qa">
             <strong>Q. 앞으로 어떤 개발자가 되고 싶나요?</strong>
             <p>
-              백엔드 중심의 풀스택 개발자로 성장하고 싶습니다.<br />
-              단기 성과보다 지속 가능한 코드와 구조를 만들 줄 아는 개발자가 되는 것이 목표입니다.
+              현재 백엔드와 프론트엔드를 모두 다루는 풀스택 개발자로 일하고 있으며,<br />
+              앞으로는 단기 성과보다 지속 가능한 코드와 구조를 설계할 줄 아는 시니어 개발자로 성장하고자 합니다.
             </p>
           </div>
         </section>
@@ -130,94 +129,112 @@
           <div class="skill-grid">
             <!-- Frontend -->
             <div class="skill-card" data-cat="Frontend">
-              <img src="img/skills/icons8-html-48.png" /><span>HTML5</span>
+              <img src="img/skills/icons8-html-48.png" alt="HTML5" /><span>HTML5</span>
             </div>
             <div class="skill-card" data-cat="Frontend">
-              <img src="img/skills/icons8-css-48.png" /><span>CSS3</span>
+              <img src="img/skills/icons8-css-48.png" alt="CSS3" /><span>CSS3</span>
             </div>
             <div class="skill-card" data-cat="Frontend">
-              <img src="img/skills/icons8-js-48.png" /><span>JavaScript</span>
+              <img src="img/skills/icons8-js-48.png" alt="JavaScript" /><span>JavaScript</span>
             </div>
             <div class="skill-card" data-cat="Frontend">
-              <img src="img/skills/icons8-typescript-48.png" /><span
+              <img src="img/skills/icons8-typescript-48.png" alt="TypeScript" /><span
                 >TypeScript</span
               >
             </div>
             <div class="skill-card" data-cat="Frontend">
-              <img src="img/skills/icons8-react-24.png" /><span>React</span>
+              <img src="img/skills/icons8-react-24.png" alt="React" /><span>React</span>
             </div>
             <div class="skill-card" data-cat="Frontend">
-              <img src="img/skills/icons8-vue-js-48.png" /><span>Vue.js</span>
+              <img src="img/skills/icons8-vue-js-48.png" alt="Vue.js" /><span>Vue.js</span>
             </div>
             <div class="skill-card" data-cat="Frontend">
-              <img src="img/skills/icons8-vite-48.png" /><span>Vite</span>
+              <img src="img/skills/icons8-vite-48.png" alt="Vite" /><span>Vite</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="jQuery" /><span>jQuery</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" /><span>Bootstrap</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" /><span>Sass</span>
+            </div>
+            <div class="skill-card" data-cat="Frontend">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cordova/cordova-original.svg" alt="Cordova" /><span>Cordova</span>
             </div>
 
             <!-- Backend -->
             <div class="skill-card" data-cat="Backend">
-              <img src="img/skills/icons8-nodejs-48.png" /><span>Node.js</span>
+              <img src="img/skills/icons8-nodejs-48.png" alt="Node.js" /><span>Node.js</span>
             </div>
             <div class="skill-card" data-cat="Backend">
-              <img src="img/skills/icons8-spring-boot-48.png" /><span
+              <img src="img/skills/icons8-spring-boot-48.png" alt="Spring Boot" /><span
                 >Spring Boot</span
               >
             </div>
             <div class="skill-card" data-cat="Backend">
-              <img src="img/skills/icons8-java-48.png" /><span>Java</span>
+              <img src="img/skills/icons8-java-48.png" alt="Java" /><span>Java</span>
             </div>
             <div class="skill-card" data-cat="Backend">
-              <img src="img/skills/icons8-python-48.png" /><span>Python</span>
+              <img src="img/skills/icons8-python-48.png" alt="Python" /><span>Python</span>
+            </div>
+            <div class="skill-card" data-cat="Backend">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" /><span>PHP</span>
+            </div>
+            <div class="skill-card" data-cat="Backend">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" /><span>Laravel</span>
             </div>
 
             <!-- Database -->
             <div class="skill-card" data-cat="Database">
-              <img src="img/skills/icons8-mysql-48.png" /><span>MySQL</span>
+              <img src="img/skills/icons8-mysql-48.png" alt="MySQL" /><span>MySQL</span>
             </div>
             <div class="skill-card" data-cat="Database">
-              <img src="img/skills/icons8-mongo-db-48.png" /><span
+              <img src="img/skills/icons8-mongo-db-48.png" alt="MongoDB" /><span
                 >MongoDB</span
               >
             </div>
             <div class="skill-card" data-cat="Database">
-              <img src="img/skills/icons8-oracle-logo-48.png" /><span
+              <img src="img/skills/icons8-oracle-logo-48.png" alt="Oracle" /><span
                 >Oracle</span
               >
             </div>
 
             <!-- DevOps / Tools -->
             <div class="skill-card" data-cat="DevOpsTools">
-              <img src="img/skills/icons8-docker-48.png" /><span>Docker</span>
+              <img src="img/skills/icons8-docker-48.png" alt="Docker" /><span>Docker</span>
             </div>
             <div class="skill-card" data-cat="DevOpsTools">
-              <img src="img/skills/icons8-github-64.png" /><span>GitHub</span>
+              <img src="img/skills/icons8-github-64.png" alt="GitHub" /><span>GitHub</span>
             </div>
             <div class="skill-card" data-cat="DevOpsTools">
-              <img src="img/skills/icons8-git-48.png" /><span>Git</span>
+              <img src="img/skills/icons8-git-48.png" alt="Git" /><span>Git</span>
             </div>
             <div class="skill-card" data-cat="DevOpsTools">
-              <img src="img/skills/icons8-vs-code-48.png" /><span>VS Code</span>
+              <img src="img/skills/icons8-vs-code-48.png" alt="VS Code" /><span>VS Code</span>
             </div>
             <div class="skill-card" data-cat="DevOpsTools">
-              <img src="img/skills/icons8-linux-48.png" /><span>Linux</span>
+              <img src="img/skills/icons8-linux-48.png" alt="Linux" /><span>Linux</span>
             </div>
             <div class="skill-card" data-cat="DevOpsTools">
-              <img src="img/skills/icons8-npm-48.png" /><span>npm</span>
+              <img src="img/skills/icons8-npm-48.png" alt="npm" /><span>npm</span>
             </div>
 
             <!-- Data / ML -->
             <div class="skill-card" data-cat="DataML">
-              <img src="img/skills/icons8-pandas-48.png" /><span>Pandas</span>
+              <img src="img/skills/icons8-pandas-48.png" alt="Pandas" /><span>Pandas</span>
             </div>
             <div class="skill-card" data-cat="DataML">
-              <img src="img/skills/icons8-numpy-48.png" /><span>NumPy</span>
+              <img src="img/skills/icons8-numpy-48.png" alt="NumPy" /><span>NumPy</span>
             </div>
 
             <!-- Collaboration / Design -->
             <div class="skill-card" data-cat="CollabDesign">
-              <img src="img/skills/icons8-notion-64.png" /><span>Notion</span>
+              <img src="img/skills/icons8-notion-64.png" alt="Notion" /><span>Notion</span>
             </div>
             <div class="skill-card" data-cat="CollabDesign">
-              <img src="img/skills/icons8-figma-48.png" /><span>Figma</span>
+              <img src="img/skills/icons8-figma-48.png" alt="Figma" /><span>Figma</span>
             </div>
           </div>
         </section>
@@ -227,56 +244,93 @@
         <h2>Projects</h2>
         <div class="project-grid">
 
+            <!-- 현직 프로젝트 - 두플 -->
+            <div class="projects-card">
+                <div class="projects-tag">현직 프로젝트</div>
+                <h3>두플 (해외 K-라이프스타일 서비스)</h3>
+                <div class="projects-description">
+                    관리자 사이트 / 사용자 앱(하이브리드) / QR 주문 웹 3개 클라이언트를 단일 Laravel API로 통합 운영.
+                    <ul class="projects-bullets">
+                        <li><strong>백엔드:</strong> 단일 소스 API + JWT 인증/권한 흐름 직접 설계. 클라이언트별 응답 스키마 분기로 정합성 유지.</li>
+                        <li><strong>실시간 흐름:</strong> QR 주문 → 관리자 Pusher 푸시 → 사용자 Aligo 알림톡까지 풀스택 한 사이클 구현.</li>
+                        <li><strong>하이브리드 앱:</strong> Cordova + Vue + Bootstrap/Sass로 빌드. 웹뷰-네이티브 브리지로 카메라(QR)·결제 SDK 통합.</li>
+                        <li><strong>글로벌 운영:</strong> 한국어/영어/베트남어 다국어 분기.</li>
+                    </ul>
+                </div>
+                <div class="projects-badges">
+                    <span class="badge">PHP</span>
+                    <span class="badge">Laravel</span>
+                    <span class="badge">Vue</span>
+                    <span class="badge">jQuery</span>
+                    <span class="badge">Bootstrap</span>
+                    <span class="badge">Sass</span>
+                    <span class="badge">Cordova</span>
+                    <span class="badge">MySQL</span>
+                    <span class="badge">JWT</span>
+                    <span class="badge">Pusher</span>
+                </div>
+                <div class="projects-actions">
+                    <a class="projects-button" href="https://hay.doubleo.co.kr/" target="_blank" rel="noopener noreferrer">관리자 사이트</a>
+                    <a class="projects-button" href="https://play.google.com/store/apps/details?id=kr.co.doubleo.hay&hl=ko" target="_blank" rel="noopener noreferrer">앱 다운로드</a>
+                    <a class="projects-button" href="https://qr.doubleo.co.kr/?token=3S8feQBn4RmPlRechySXypkdyyUek4Ly" target="_blank" rel="noopener noreferrer">QR 주문 웹</a>
+                </div>
+            </div>
+
             <!-- 자바과정 프로젝트 1 -->
             <div class="projects-card">
                 <div class="projects-tag">자바과정 프로젝트 (1)</div>
                 <h3>편의점 재고 관리 시스템</h3>
                 <div class="projects-description">
-                    Python + Oracle 기반의 재고관리 시스템.<br />
-                    로그인, 재고/발주 기능 포함.
+                    PyQt5 GUI + Oracle DB + pandas 분석 (5일 단기 풀스택 학습 프로젝트)
+                    <ul class="projects-bullets">
+                        <li><strong>풀 사이클:</strong> 로그인(5회 실패 차단) · 재고 검색/CRUD · 발주 워크플로우 · 배달 리스트 · pandas 라인/파이 다중 차트 분석 구현.</li>
+                        <li><strong>DB 설계:</strong> Oracle 5개 테이블(브랜드/회원/배송/이력/상품) 직접 설계, DBeaver로 ERD·쿼리 관리.</li>
+                        <li><strong>DBMS 추상화:</strong> 팀원별 DB 환경 차이를 환경변수 + 동적 연결 객체로 추상화해 DBMS 종속성 제거.</li>
+                        <li><strong>인증 재설계:</strong> 로그인 5회 차단 통합 시 인증 흐름 충돌을 세션 기반 구조로 재설계, 상태/인증 책임 분리.</li>
+                    </ul>
                 </div>
                 <div class="projects-badges">
                     <span class="badge">Python</span>
-                    <span class="badge">Oracle</span>
                     <span class="badge">PyQt5</span>
+                    <span class="badge">Oracle</span>
+                    <span class="badge">pandas</span>
+                    <span class="badge">DBeaver</span>
                 </div>
                 <div class="projects-actions">
-                    <a
-                    class="projects-button"
-                    href="https://rare-mountain-b86.notion.site/20da450b75e1814fba84dba0166509f4"
-                    >자세히 보기</a
-                    >
-                    <button class="projects-button" onclick="openImageModal('img/project1.jpg')">이미지</button>
+                    <a class="projects-button" href="https://github.com/sumin020415/-Inventory-management" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="projects-button" href="https://rare-mountain-b86.notion.site/20da450b75e1814fba84dba0166509f4" target="_blank" rel="noopener noreferrer">자세히 보기</a>
+                    <button class="projects-button" onclick="openImageModal(['img/project1.jpg','https://github.com/sumin020415/-Inventory-management/raw/main/image/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EC%84%9C.jpg','https://github.com/sumin020415/-Inventory-management/raw/main/image/DB%20%EA%B5%AC%EC%A1%B0.jpg','https://github.com/sumin020415/-Inventory-management/raw/main/image/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%8B%9C%EA%B0%81%ED%99%94.jpg','https://github.com/sumin020415/-Inventory-management/raw/main/image/%ED%8C%90%EB%A7%A4%EC%98%88%EC%B8%A1.jpg'])">이미지</button>
                 </div>
             </div>
 
             <!-- 자바과정 프로젝트 2 -->
             <div class="projects-card">
                 <div class="projects-tag">자바과정 프로젝트 (2)</div>
-                <h3>보안등/CCTV/제보 소통 게시판 사이트 개발</h3>
+                <h3>안밤 : 안전 밤길 (ANBAM)</h3>
                 <div class="projects-description">
-                    지도 API를 활용한 위치 기반 제보 등록<br />
-                    위치 기반 제보글 작성 및 좋아요/싫어요
+                    Kakao Map + Spring Boot + React 기반 시민 커뮤니티 보안 플랫폼 (4인 팀, 2주 단기 / 2025-06-13~06-25). 부산 공공데이터(보안등·CCTV·인구통계)를 지도와 결합해 구·동별 안전 지표를 시각화하고, 시민 사진 제보·반응 커뮤니티 구현.
+                    <ul class="projects-bullets">
+                        <li><strong>풀 사이클(팀):</strong> 회원/로그인(JWT) · 게시판 CRUD · 댓글·대댓글·좋아요/싫어요 · 사진 제보 · Kakao Map 핀 시각화.</li>
+                        <li><strong>게시판:</strong> 글/댓글/대댓글/좋아요·싫어요를 Spring Boot API + React 화면 양쪽 구현.</li>
+                        <li><strong>DB 전담:</strong> 팀 ERD 기반 Oracle 11g(Docker + DBeaver) 스키마·쿼리·마이그레이션 전반 관리.</li>
+                        <li><strong>협업:</strong> JWT/Spring Security 인증, Kakao Map + 공공데이터 시각화는 팀원과 분담.</li>
+                    </ul>
                 </div>
                 <div class="projects-badges">
                     <span class="badge">Java</span>
                     <span class="badge">Spring Boot</span>
+                    <span class="badge">Spring Security</span>
+                    <span class="badge">JWT</span>
                     <span class="badge">Oracle</span>
+                    <span class="badge">Docker</span>
                     <span class="badge">React</span>
+                    <span class="badge">Vite</span>
                     <span class="badge">Kakao Map API</span>
                 </div>
                 <div class="projects-actions">
-                    <a
-                    class="projects-button"
-                    href="https://rare-mountain-b86.notion.site/213a450b75e1801ca61af690bec2a6dc"
-                    >자세히 보기</a
-                    >
-                    <button
-                    class="projects-button"
-                    onclick="openVideoModal('videos/project2.mp4')"
-                    >
-                    영상보기
-                    </button>
+                    <a class="projects-button" href="https://github.com/sumin020415/project_2" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="projects-button" href="https://rare-mountain-b86.notion.site/213a450b75e1801ca61af690bec2a6dc" target="_blank" rel="noopener noreferrer">자세히 보기</a>
+                    <button class="projects-button" onclick="openVideoModal('videos/project2.mp4')">영상보기</button>
                 </div>
             </div>
 
@@ -367,8 +421,8 @@
         <!-- ──────────────────── Book-Viewer Modal ──────────────────── -->
         <div id="book-modal" class="modal">
             <div class="modal-box book-box">
-            <span class="modal-close" onclick="closeBook()">×</span>
-            <span class="modal-back"  onclick="backToList()">← 목록으로</span>
+            <span class="modal-close" onclick="closeBook()" role="button" aria-label="닫기">×</span>
+            <span class="modal-back"  onclick="backToList()" role="button" aria-label="목록으로 돌아가기">←</span>
 
       <h3 id="book-title" class="book-title"></h3>
 

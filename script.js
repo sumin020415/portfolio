@@ -3,18 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const $  = sel => document.querySelector(sel);
   const $$ = sel => Array.from(document.querySelectorAll(sel));
 
-  const images   = ['img/project-image1.jpg','img/project-image2.jpg','img/project-image3.jpg'];
-  let   imgIdx   = 0, zoom = 1;
-  const modalImg = $('#modal-img') || document.createElement('img');
-
-  window.openSimpleModal = () => { imgIdx = 0; zoom = 1; $('#modal').style.display = 'flex'; showImg(); };
-  const showImg          = () => { modalImg.src = images[imgIdx]; modalImg.style.transform = `scale(${zoom})`; };
-  window.closeModal      = () => { $('#modal').style.display = 'none'; };
-  window.zoomImage       = f => { zoom *= f; showImg(); };
-  window.resetZoom       = () => { zoom = 1; showImg(); };
-  window.prevImage       = () => { if (imgIdx > 0)                 imgIdx--; showImg(); };
-  window.nextImage       = () => { if (imgIdx < images.length - 1) imgIdx++; showImg(); };
-
   function setTheme (mode) {
     document.documentElement.setAttribute('data-theme', mode);
     localStorage.setItem('theme', mode);
@@ -33,21 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#theme-toggle')?.addEventListener('click', () =>
       setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
 
-  $('#sidebar-toggle')?.addEventListener('click', e => {
-      $('.sidebar')?.classList.toggle('collapsed');
-      $('.layout') ?.classList.toggle('collapsed');
-      e.currentTarget.textContent = e.currentTarget.textContent === '☰' ? '×' : '☰';
-  });
-
-  $('#nav-toggle')?.addEventListener('click', () => $('#nav-menu')?.classList.toggle('active'));
-
   $('#download-pdf')?.addEventListener('click', () => {
     window.print();
   });
 
 
   new TypeIt('#typeit', { speed: 50, startDelay: 300 })
-     .type('안녕하세요 :) Python, Java 기반의 서버 개발과 데이터 처리를 즐기는 백엔드 주니어 개발자 박수민입니다.')
+     .type('Laravel API + 웹/앱/QR 3개 클라이언트 + Pusher·Aligo 실시간 인프라를 운영하는 현직 개발자입니다.')
      .go();
 
   let tabClicked = false;
@@ -78,20 +58,29 @@ document.addEventListener('DOMContentLoaded', () => {
   (() => {
     const modal  = $('#videoModal'),
           video  = $('#videoPlayer'),
+          source = video.querySelector('source'),
+          originalSrc = source.getAttribute('src'),
           closeX = modal.querySelector('.modal-close');
 
     window.openVideoModal = src => {
-      if (src) video.querySelector('source').src = src;
+      if (src) source.src = src;
       video.load();
       modal.style.display = 'flex';
       requestAnimationFrame(() => modal.classList.add('show'));
-      video.currentTime = 0; video.play();
+      video.currentTime = 0;
+      const p = video.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
     };
     const close = () => {
       modal.classList.remove('show');
       video.pause(); video.currentTime = 0;
-      modal.addEventListener('transitionend', () => modal.style.display = 'none', { once: true });
+      modal.addEventListener('transitionend', () => {
+        modal.style.display = 'none';
+        source.src = originalSrc;
+        video.load();
+      }, { once: true });
     };
+    window.closeVideoModal = close;
     closeX .addEventListener('click', e => { e.stopPropagation(); close(); });
     modal  .addEventListener('click', e => { if (e.target === modal) close(); });
     window .addEventListener('keydown', e => { if (e.key === 'Escape' && modal.style.display === 'flex') close(); });
@@ -121,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList.remove('show');
       modal.addEventListener('transitionend', () => modal.style.display = 'none', { once: true });
     };
+    window.closeImageModal = close;
 
     prevBt.onclick = e => { e.stopPropagation(); idx = (idx - 1 + list.length) % list.length; update(); };
     nextBt.onclick = e => { e.stopPropagation(); idx = (idx + 1) % list.length; update(); };
@@ -161,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const bookModal   = $('#book-modal'),
+        bookBox     = bookModal.querySelector('.book-box'),
         selectorBox = $('#book-selector'),
         flipbook    = $('#flipbook'),
         titleEl     = $('#book-title'),
@@ -172,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bookModal.style.display = 'flex';
     requestAnimationFrame(() => bookModal.classList.add('show'));
 
+    bookBox    .classList.remove('viewing');
     selectorBox.style.display = 'block';
     flipbook   .style.display = 'none';
     titleEl    .style.display = 'none';
@@ -189,13 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
     flipbook.innerHTML = '';
     pageArr.forEach((src, i) => {
       const img = document.createElement('img');
-      img.src = src; img.className = 'book-page';
+      img.src = encodeURI(src); img.className = 'book-page';
       img.style.display = i ? 'none' : 'block';
       flipbook.appendChild(img);
     });
 
     pageIdx = 0;
-    selectorBox.style.display = 'block none'.split(' ')[0]; 
+    bookBox    .classList.add('viewing');
     selectorBox.style.display = 'none';
     flipbook   .style.display = 'flex';
     titleEl    .textContent   = title;
@@ -222,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
   window.backToList = () => {
+    bookBox    .classList.remove('viewing');
     selectorBox.style.display = 'block';
     flipbook   .style.display = 'none';
     titleEl    .style.display = 'none';
@@ -232,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bookModal.addEventListener('transitionend', () => {
       bookModal.style.display = 'none';
       flipbook.innerHTML = '';
+      bookBox.classList.remove('viewing');
     }, { once: true });
   };
 
