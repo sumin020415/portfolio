@@ -127,26 +127,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const books = {
     analysis: {
-      '청소년정신건강':    Array.from({ length: 8  }, (_, i) => `img/book/청소년정신건강분석/청소년정신건강분석_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '지하철 이용현황':  Array.from({ length: 6  }, (_, i) => `img/book/지하철이용현황분석/지하철이용현황분석_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '인천공항 이용자수': Array.from({ length: 7  }, (_, i) => `img/book/인천공항이용자수/인천공항이용자수_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '연령별 취업자수':  Array.from({ length: 9  }, (_, i) => `img/book/연령별-취업자수/연령별 취업자수_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '연령별 인구 분포 분석': Array.from({ length: 19 }, (_, i) => `img/book/연령별-인구-분포-분석/연령별 인구 분포 분석_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '쇼핑몰 시각화':   Array.from({ length: 5  }, (_, i) => `img/book/쇼핑몰-시각화/쇼핑몰 시각화_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '방범용CCTV인구데이터분석':   Array.from({ length: 15 }, (_, i) => `img/book/방범용CCTV인구데이터분석/방범용CCTV인구데이터분석_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '교통사고유형별발생': Array.from({ length: 20 }, (_, i) => `img/book/교통사고유형별발생/교통사고유형별발생_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '팁문화분석':      Array.from({ length: 9  }, (_, i) => `img/book/팁문화분석seaborn/팁문화분석(seaborn)_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '공간정보':        Array.from({ length: 5  }, (_, i) => `img/book/공간정보/공간정보_page-${String(i + 1).padStart(4, '0')}.jpg`)
+      '청소년정신건강':    Array.from({ length: 8  }, (_, i) => `img/book/mental-health-youth/mental-health-youth_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '지하철 이용현황':  Array.from({ length: 6  }, (_, i) => `img/book/subway-usage/subway-usage_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '인천공항 이용자수': Array.from({ length: 7  }, (_, i) => `img/book/incheon-airport/incheon-airport_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '연령별 취업자수':  Array.from({ length: 9  }, (_, i) => `img/book/employment-by-age/employment-by-age_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '연령별 인구 분포 분석': Array.from({ length: 19 }, (_, i) => `img/book/population-by-age/population-by-age_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '쇼핑몰 시각화':   Array.from({ length: 5  }, (_, i) => `img/book/shopping-mall/shopping-mall_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '방범용CCTV인구데이터분석':   Array.from({ length: 15 }, (_, i) => `img/book/cctv-population/cctv-population_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '교통사고유형별발생': Array.from({ length: 20 }, (_, i) => `img/book/traffic-accidents/traffic-accidents_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '팁문화분석':      Array.from({ length: 9  }, (_, i) => `img/book/tips-seaborn/tips-seaborn_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '공간정보':        Array.from({ length: 5  }, (_, i) => `img/book/spatial-info/spatial-info_page-${String(i + 1).padStart(4, '0')}.jpg`)
     },
     crawling: {
-      '셀레니움1':     Array.from({ length: 9  }, (_, i) => `img/book/셀레니움크롤링/셀레니움크롤링_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '셀레니움2':     Array.from({ length: 2 }, (_, i) => `img/book/셀레니움크롤링/셀레니움크롤링2_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '셀레니움3':     Array.from({ length: 21 }, (_, i) => `img/book/셀레니움크롤링/셀레니움크롤링3_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '스타벅스크롤링': Array.from({ length: 21 }, (_, i) => `img/book/크롤링-스타벅스/크롤링 스타벅스_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '인스타크롤링':   Array.from({ length: 11 }, (_, i) => `img/book/인스타크롤링/인스타크롤링_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '주유소크롤링1':  Array.from({ length: 4  }, (_, i) => `img/book/주유소크롤링/주유소크롤링1_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '주유소크롤링2':  Array.from({ length: 8  }, (_, i) => `img/book/주유소크롤링/주유소크롤링2_page-${String(i + 1).padStart(4, '0')}.jpg`),
-      '최저가주유':     Array.from({ length: 30 }, (_, i) => `img/book/최저가주유/최저가주유_page-${String(i + 1).padStart(4, '0')}.jpg`)
+      '셀레니움1':     Array.from({ length: 9  }, (_, i) => `img/book/selenium-crawl/selenium-crawl-1_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '셀레니움2':     Array.from({ length: 2 }, (_, i) => `img/book/selenium-crawl/selenium-crawl-2_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '셀레니움3':     Array.from({ length: 21 }, (_, i) => `img/book/selenium-crawl/selenium-crawl-3_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '스타벅스크롤링': Array.from({ length: 21 }, (_, i) => `img/book/starbucks-crawl/starbucks-crawl_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '인스타크롤링':   Array.from({ length: 11 }, (_, i) => `img/book/instagram-crawl/instagram-crawl_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '주유소크롤링1':  Array.from({ length: 4  }, (_, i) => `img/book/gas-station/gas-station-1_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '주유소크롤링2':  Array.from({ length: 8  }, (_, i) => `img/book/gas-station/gas-station-2_page-${String(i + 1).padStart(4, '0')}.jpg`),
+      '최저가주유':     Array.from({ length: 30 }, (_, i) => `img/book/cheapest-gas/cheapest-gas_page-${String(i + 1).padStart(4, '0')}.jpg`)
     }
   };
 

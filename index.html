@@ -26,7 +26,6 @@
           <li><a href="#certificate">Certificate</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#archiving">Archiving</a></li>
         </ul>
       </div>
       <div class="nav-right">
@@ -51,11 +50,22 @@
               <p><strong>포지션 :</strong> 풀스택 개발자</p>
             </div>
           </div>
-          <p class="about-summary">
-            기초부터 프로젝트까지 꾸준히 쌓아온 개발 경험을 바탕으로, 협업과 기록을 중요시하며 성장하는 개발자입니다.
-          </p>
-          <br />
           <p id="typeit"></p>
+        </section>
+
+        <!-- Archiving (사이드바 컴팩트 버전) -->
+        <section id="archiving" class="card archiving-compact">
+          <h2>Archiving</h2>
+          <div class="archiving-container">
+            <a href="https://github.com/sumin020415" class="archiving-item" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+              <span>GitHub</span>
+            </a>
+            <a href="https://rare-mountain-b86.notion.site/20da450b75e18047a530ea706ef4c93a?pvs=74" class="archiving-item" target="_blank" rel="noopener noreferrer">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion" />
+              <span>Notion</span>
+            </a>
+          </div>
         </section>
       </aside>
 
@@ -249,6 +259,7 @@
                 <div class="projects-tag">현직 프로젝트</div>
                 <h3>두플 (해외 K-라이프스타일 서비스)</h3>
                 <div class="projects-description">
+                    <strong>풀스택 개발자 2인 팀 프로젝트</strong><br />
                     관리자 사이트 / 사용자 앱(하이브리드) / QR 주문 웹 3개 클라이언트를 단일 Laravel API로 통합 운영.
                     <ul class="projects-bullets">
                         <li><strong>백엔드:</strong> 단일 소스 API + JWT 인증/권한 흐름 직접 설계. 클라이언트별 응답 스키마 분기로 정합성 유지.</li>
@@ -334,66 +345,35 @@
                 </div>
             </div>
 
-            <!-- 개인 프로젝트 1 -->
+            <!-- 개인 프로젝트 - Python 데이터 작업 -->
             <div class="projects-card">
                 <div class="projects-tag">개인 프로젝트</div>
-                <h3>데이터 분석 모음</h3>
+                <h3>Python 데이터 작업 모음</h3>
                 <div class="projects-description">
-                    Pandas, Seaborn, Matplotlib 기반 시각화 및 통계분석
+                    공공데이터·동적 웹사이트를 수집하고 시각화·결합 분석으로 인사이트를 도출한 18편의 학습 결과물.
+                    <ul class="projects-bullets">
+                        <li><strong>분석·시각화:</strong> Pandas/Seaborn/Matplotlib + folium 지도. KOSIS·부산공공·행안부 데이터 처리.</li>
+                        <li><strong>크롤링:</strong> Selenium WebDriverWait/ActionChains + BeautifulSoup. .env 자격분리, 페이지네이션·드롭다운·동적 로딩 대응.</li>
+                        <li><strong>빅데이터 환경:</strong> Hadoop HDFS에서 데이터 적재·읽기·전처리.</li>
+                        <li><strong>결합 분석:</strong> 부산 인구통계 × 스타벅스 매장 분포 연관성 등 단순 수집을 넘는 인사이트 시도.</li>
+                    </ul>
                 </div>
                 <div class="projects-badges">
                     <span class="badge">Python</span>
                     <span class="badge">Pandas</span>
                     <span class="badge">Seaborn</span>
-                </div>
-                <div class="projects-actions">
-                    <button
-                    class="projects-button"
-                    onclick="openBookModal('analysis')"
-                    >
-                    📖 Book
-                    </button>
-                </div>
-            </div>
-
-            <!-- 개인 프로젝트 2 -->
-            <div class="projects-card">
-                <div class="projects-tag">개인 프로젝트</div>
-                <h3>웹 크롤링 모음</h3>
-                <div class="projects-description">
-                    Selenium, Requests, BeautifulSoup를 활용한 데이터 수집
-                </div>
-                <div class="projects-badges">
-                    <span class="badge">Python</span>
+                    <span class="badge">Matplotlib</span>
                     <span class="badge">Selenium</span>
                     <span class="badge">BeautifulSoup</span>
                 </div>
                 <div class="projects-actions">
-                    <button
-                    class="projects-button"
-                    onclick="openBookModal('crawling')"
-                    >
-                    📖 Book
-                    </button>
+                    <button class="projects-button" onclick="openBookModal('analysis')">📖 데이터 분석</button>
+                    <button class="projects-button" onclick="openBookModal('crawling')">📖 웹 크롤링</button>
                 </div>
             </div>
         </div> 
     </section>
 
-        <!-- Archiving -->
-        <section id="archiving" class="card">
-          <h2>Archiving</h2>
-          <div class="archiving-container">
-            <a href="https://github.com/sumin020415" class="archiving-item" target="_blank">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-              <span>GitHub</span>
-            </a>
-            <a href="https://rare-mountain-b86.notion.site/20da450b75e18047a530ea706ef4c93a?pvs=74" class="archiving-item" target="_blank">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion" />
-              <span>Notion</span>
-            </a>
-          </div>
-        </section>
       </main>
     </div>
 
@@ -428,64 +408,155 @@
 
             <!-- 책 목록 패널 -->
         <div id="book-selector">
+        <p class="book-hint">⭐ 표시는 추천 권 (Best Pick)</p>
         <div class="book-grid">
 
             <!-- 분석 -->
             <div class="book-card" data-category="analysis" onclick="loadBook('청소년정신건강')">
-            <div class="book-cover">청소년정신건강</div>
+              <div class="book-cover">
+                <span class="book-icon">🧠</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">청소년정신건강</span>
+                <span class="book-meta">8p · Pandas</span>
+              </div>
             </div>
-            <div class="book-card" data-category="analysis" onclick="loadBook('팁문화분석')">
-            <div class="book-cover">팁문화분석</div>
+            <div class="book-card" data-category="analysis" data-best="true" onclick="loadBook('팁문화분석')">
+              <div class="book-cover">
+                <span class="book-icon">💰</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">팁문화분석</span>
+                <span class="book-meta">9p · seaborn</span>
+              </div>
             </div>
             <div class="book-card" data-category="analysis" onclick="loadBook('지하철 이용현황')">
-            <div class="book-cover">지하철 이용현황</div>
+              <div class="book-cover">
+                <span class="book-icon">🚇</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">지하철 이용현황</span>
+                <span class="book-meta">6p · Pandas</span>
+              </div>
             </div>
             <div class="book-card" data-category="analysis" onclick="loadBook('인천공항 이용자수')">
-            <div class="book-cover">인천공항 이용자수</div>
+              <div class="book-cover">
+                <span class="book-icon">✈️</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">인천공항 이용자수</span>
+                <span class="book-meta">7p · matplotlib</span>
+              </div>
             </div>
             <div class="book-card" data-category="analysis" onclick="loadBook('연령별 취업자수')">
-            <div class="book-cover">연령별 취업자수</div>
+              <div class="book-cover">
+                <span class="book-icon">💼</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">연령별 취업자수</span>
+                <span class="book-meta">9p · matplotlib</span>
+              </div>
             </div>
-            <div class="book-card" data-category="analysis" onclick="loadBook('연령별 인구 분포 분석')">
-            <div class="book-cover">연령별 인구분포 분석</div>
+            <div class="book-card" data-category="analysis" data-best="true" onclick="loadBook('연령별 인구 분포 분석')">
+              <div class="book-cover">
+                <span class="book-icon">🐘</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">연령별 인구분포 분석</span>
+                <span class="book-meta">19p · HDFS</span>
+              </div>
             </div>
             <div class="book-card" data-category="analysis" onclick="loadBook('쇼핑몰 시각화')">
-            <div class="book-cover">쇼핑몰 시각화</div>
+              <div class="book-cover">
+                <span class="book-icon">🛒</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">쇼핑몰 시각화</span>
+                <span class="book-meta">5p · Pandas</span>
+              </div>
             </div>
-            <div class="book-card" data-category="analysis" onclick="loadBook('방범용CCTV인구데이터분석')">
-            <div class="book-cover">방범용CCTV인구데이터분석</div>
+            <div class="book-card" data-category="analysis" data-best="true" onclick="loadBook('방범용CCTV인구데이터분석')">
+              <div class="book-cover">
+                <span class="book-icon">📹</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">방범용CCTV 인구 분석</span>
+                <span class="book-meta">15p · 부산공공</span>
+              </div>
             </div>
             <div class="book-card" data-category="analysis" onclick="loadBook('교통사고유형별발생')">
-            <div class="book-cover">교통사고유형별발생</div>
+              <div class="book-cover">
+                <span class="book-icon">🚗</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">교통사고 유형별 발생</span>
+                <span class="book-meta">20p · matplotlib</span>
+              </div>
             </div>
             <div class="book-card" data-category="analysis" onclick="loadBook('공간정보')">
-            <div class="book-cover">공간정보</div>
+              <div class="book-cover">
+                <span class="book-icon">🗺️</span>
+                <span class="book-cat">분석</span>
+                <span class="book-title-text">공간정보</span>
+                <span class="book-meta">5p · vworld</span>
+              </div>
             </div>
 
             <!-- 크롤링 -->
             <div class="book-card" data-category="crawling" onclick="loadBook('셀레니움1')">
-            <div class="book-cover">셀레니움1</div>
+              <div class="book-cover">
+                <span class="book-icon">☕</span>
+                <span class="book-cat">크롤링</span>
+                <span class="book-title-text">셀레니움1</span>
+                <span class="book-meta">9p · Selenium</span>
+              </div>
             </div>
-            <div class="book-card" data-category="crawling" onclick="loadBook('셀레니움2')">
-            <div class="book-cover">셀레니움2</div>
+            <div class="book-card" data-category="crawling" data-best="true" onclick="loadBook('셀레니움2')">
+              <div class="book-cover">
+                <span class="book-icon">🗺️</span>
+                <span class="book-cat">크롤링</span>
+                <span class="book-title-text">셀레니움2</span>
+                <span class="book-meta">2p · folium</span>
+              </div>
             </div>
-            <div class="book-card" data-category="crawling" onclick="loadBook('셀레니움3')">
-            <div class="book-cover">셀레니움3</div>
+            <div class="book-card" data-category="crawling" data-best="true" onclick="loadBook('셀레니움3')">
+              <div class="book-cover">
+                <span class="book-icon">📍</span>
+                <span class="book-cat">크롤링</span>
+                <span class="book-title-text">셀레니움3</span>
+                <span class="book-meta">21p · 결합분석</span>
+              </div>
             </div>
             <div class="book-card" data-category="crawling" onclick="loadBook('스타벅스크롤링')">
-            <div class="book-cover">스타벅스크롤링</div>
+              <div class="book-cover">
+                <span class="book-icon">☕</span>
+                <span class="book-cat">크롤링</span>
+                <span class="book-title-text">스타벅스 크롤링</span>
+                <span class="book-meta">21p · Selenium</span>
+              </div>
             </div>
             <div class="book-card" data-category="crawling" onclick="loadBook('인스타크롤링')">
-            <div class="book-cover">인스타크롤링</div>
+              <div class="book-cover">
+                <span class="book-icon">📸</span>
+                <span class="book-cat">크롤링</span>
+                <span class="book-title-text">인스타 크롤링</span>
+                <span class="book-meta">11p · .env+HDFS</span>
+              </div>
             </div>
             <div class="book-card" data-category="crawling" onclick="loadBook('주유소크롤링1')">
-            <div class="book-cover">주유소크롤링1</div>
+              <div class="book-cover">
+                <span class="book-icon">⛽</span>
+                <span class="book-cat">크롤링</span>
+                <span class="book-title-text">주유소 크롤링 1</span>
+                <span class="book-meta">4p · Selenium</span>
+              </div>
             </div>
-            <div class="book-card" data-category="crawling" onclick="loadBook('주유소크롤링2')">
-            <div class="book-cover">주유소크롤링2</div>
+            <div class="book-card" data-category="crawling" data-best="true" onclick="loadBook('주유소크롤링2')">
+              <div class="book-cover">
+                <span class="book-icon">⛽</span>
+                <span class="book-cat">크롤링</span>
+                <span class="book-title-text">주유소 크롤링 2</span>
+                <span class="book-meta">8p · HDFS</span>
+              </div>
             </div>
             <div class="book-card" data-category="crawling" onclick="loadBook('최저가주유')">
-            <div class="book-cover">최저가주유</div>
+              <div class="book-cover">
+                <span class="book-icon">💸</span>
+                <span class="book-cat">크롤링</span>
+                <span class="book-title-text">최저가 주유</span>
+                <span class="book-meta">30p · 자동화</span>
+              </div>
             </div>
 
         </div>

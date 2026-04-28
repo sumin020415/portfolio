@@ -119,6 +119,10 @@ button,
   color:var(--text);
 }
 
+#typeit{
+  margin-top:18px;
+}
+
 #certificate ul{
   list-style:none;
   padding-left:0;
@@ -351,6 +355,36 @@ button,
   height:100px;
   margin-bottom:10px;
   filter:var(--img-filter);
+}
+
+.archiving-compact{
+  padding:18px;
+  margin-bottom:20px;
+}
+
+.archiving-compact h2{
+  font-size:1.3em;
+  margin-bottom:14px;
+}
+
+.archiving-compact .archiving-container{
+  gap:14px;
+  margin:6px 0 0;
+}
+
+.archiving-compact .archiving-item{
+  width:78px;
+  padding:10px;
+}
+
+.archiving-compact .archiving-item img{
+  width:42px;
+  height:42px;
+  margin-bottom:6px;
+}
+
+.archiving-compact .archiving-item span{
+  font-size:0.78rem;
 }
 
 footer{
