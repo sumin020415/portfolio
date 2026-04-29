@@ -1,0 +1,27 @@
+.vscode/
+.DS_Store
+Thumbs.db
+node_modules/
+.claude/
+.env
+*.log
+*.tmp
+.idea/
+
+# 윈도우 추가
+desktop.ini
+ehthumbs.db
+
+# Vim/Neovim 사용자 대비
+*.swp
+*.swo
+*~
+
+# 미래에 빌드 도구 도입 시
+dist/
+build/
+.cache/
+
+# 환경파일 변종 한 방에
+.env*
+!.env.example   # 예시 파일은 추적 허용
