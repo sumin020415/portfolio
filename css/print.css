@@ -1,0 +1,408 @@
+@media print {
+  /* ===== Page setup ===== */
+  @page {
+    size: A4;
+    margin: 14mm 16mm;
+  }
+
+  body {
+    background: #fff !important;
+    color: #2a2a2a !important;
+    font-size: 10.5pt !important;
+    line-height: 1.6 !important;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard','Noto Sans KR','맑은 고딕',sans-serif !important;
+  }
+
+  /* ===== Hide UI controls only (NOT the sidebar) ===== */
+  .navbar,
+  #sidebar-toggle,
+  #theme-toggle,
+  #download-pdf,
+  #nav-toggle,
+  .modal,
+  #videoModal,
+  #imageModal,
+  #book-modal {
+    display: none !important;
+  }
+
+  /* ===== Layout: stack everything vertically ===== */
+  .layout {
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* ===== Sidebar (About Me) — top header ===== */
+  .sidebar {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 0 10px !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .sidebar .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* ===== Main ===== */
+  .main {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  /* ===== Cards (서류 톤이지만 따뜻한 여백) ===== */
+  .card {
+    box-shadow: none !important;
+    background: #fff !important;
+    border: none !important;
+    border-top: 1px solid #d4cdc4 !important;   /* 회색 → 웜 베이지톤 */
+    padding: 14px 0 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 6px !important;
+    border-radius: 0 !important;
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  /* About 카드는 첫 섹션이라 위 보더 없이 */
+  #about {
+    border-top: none !important;
+    padding-top: 0 !important;
+    padding-bottom: 18px !important;
+  }
+
+  /* ===== About card ===== */
+  #about .about-container {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    align-items: center !important;
+    margin-bottom: 8px !important;
+  }
+
+  .about-info {
+    text-align: left !important;
+    line-height: 1.7 !important;
+    font-size: 10pt !important;
+  }
+
+  .about-info p {
+    margin: 1px 0 !important;
+    color: #1a1a1a !important;
+  }
+
+  .about-summary {
+    text-align: left !important;
+    color: #333 !important;
+    font-size: 10pt !important;
+    margin-top: 4px !important;
+  }
+
+  .profile-img {
+    width: 90px !important;
+    height: 90px !important;
+    border: 2px solid #e8806e !important;        /* 코랄 액센트 보더 */
+    border-radius: 50% !important;               /* 원형 — 인간미 */
+    box-shadow: none !important;
+    margin: 0 !important;
+    object-fit: cover !important;
+  }
+
+  /* TypeIt 빈 영역 숨김 */
+  #typeit {
+    display: none !important;
+  }
+
+  /* ===== Headings (서류 톤이지만 부드럽게) ===== */
+  h1, h2, h3 {
+    color: #2a2a2a !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin: 0 0 10px !important;
+    page-break-after: avoid;
+    break-after: avoid;
+    font-weight: 700 !important;
+  }
+
+  h2 {
+    font-size: 13pt !important;
+    text-transform: none !important;            /* 대문자 강제 제거 — 한국어/영문 자연스럽게 */
+    letter-spacing: 0 !important;
+    border-bottom: 2px solid #e8806e !important; /* 회색 진한 줄 → 코랄 액센트 */
+    padding-bottom: 4px !important;
+    display: inline-block !important;            /* 텍스트 폭만큼만 밑줄 */
+    margin-bottom: 12px !important;
+  }
+
+  h3 {
+    font-size: 10.5pt !important;
+  }
+
+  /* ===== Skills: 모든 스킬 표시, 텍스트 위주 ===== */
+  .tab-buttons,
+  .tech-tabs {
+    display: none !important;
+  }
+
+  .skill-grid {
+    display: grid !important;
+    grid-template-columns: repeat(10, 1fr) !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .skill-card {
+    opacity: 1 !important;
+    padding: 3px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .skill-card img {
+    width: 20px !important;
+    height: 20px !important;
+    filter: none !important;
+    border: none !important;
+    margin: 0 auto 2px !important;
+    box-shadow: none !important;
+  }
+
+  .skill-card span {
+    font-size: 7pt !important;
+    color: #333 !important;
+  }
+
+  /* ===== Projects (서류 톤) ===== */
+  .project-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .projects-card {
+    background: #fff !important;
+    border: 1px solid #e0d8cf !important;        /* 차가운 회색 → 웜 베이지 톤 */
+    border-radius: 6px !important;               /* 직각 → 살짝 둥글게 */
+    box-shadow: none !important;
+    min-height: auto !important;
+    padding: 14px 14px 12px !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    gap: 6px !important;
+  }
+
+  /* Tag — 코랄 액센트 + 부드러운 박스 */
+  .projects-tag {
+    position: static !important;
+    display: inline-block !important;
+    background: #fce9e3 !important;              /* 연한 코랄 배경 */
+    color: #c25a48 !important;                   /* 진한 코랄 텍스트 */
+    border: none !important;
+    border-radius: 10px !important;              /* pill 스타일 */
+    font-size: 7.5pt !important;
+    font-weight: 600 !important;
+    padding: 3px 9px !important;
+    box-shadow: none !important;
+    margin-bottom: 2px !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+  }
+
+  .projects-card h3 {
+    border: none !important;
+    margin: 4px 0 3px !important;
+    font-size: 10.5pt !important;
+    color: #111 !important;
+    text-align: left !important;
+  }
+
+  .projects-description {
+    font-size: 9pt !important;
+    color: #333 !important;
+    line-height: 1.5 !important;
+    margin: 2px 0 4px !important;
+  }
+
+  /* Badges — 부드러운 베이지 outline */
+  .projects-badges {
+    gap: 4px !important;
+    margin: 2px 0 !important;
+  }
+
+  .projects-badges .badge {
+    background: #f6f1ec !important;             /* 연한 베이지 배경 */
+    color: #5a4f44 !important;                   /* 웜 토프 텍스트 */
+    border: 1px solid #e0d8cf !important;
+    border-radius: 4px !important;
+    font-size: 7pt !important;
+    padding: 1.5px 6px !important;
+    font-weight: 500 !important;
+  }
+
+  /* ===== Project links: URL을 텍스트로 노출 (서류용) ===== */
+  .projects-actions {
+    display: block !important;
+    margin-top: 6px !important;
+    font-size: 8.5pt !important;
+    line-height: 1.5 !important;
+    gap: 0 !important;
+  }
+
+  /* span 형태 (예: 사내 프로젝트 비공개 라벨) — 작게 텍스트로만 */
+  span.projects-button {
+    display: inline-block !important;
+    background: transparent !important;
+    border: none !important;
+    color: #666 !important;
+    font-size: 8pt !important;
+    font-style: italic !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+  }
+
+  /* JS-only 버튼 (이미지/영상보기/Book) — 인쇄에서 무의미하므로 숨김 */
+  button.projects-button {
+    display: none !important;
+  }
+
+  /* 외부 링크 a 태그 — URL을 텍스트로 노출 */
+  a.projects-button {
+    display: inline !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    color: #c25a48 !important;                  /* 코랄 액센트로 링크임을 표시 */
+    font-size: 8.5pt !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    margin-right: 6px !important;
+  }
+
+  a.projects-button::after {
+    content: " " attr(href) !important;
+    color: #888 !important;
+    font-size: 7.5pt !important;
+    font-weight: 400 !important;
+    word-break: break-all !important;
+  }
+
+  /* ===== Certificate / Interview ===== */
+  #certificate ul {
+    column-count: 2 !important;
+    column-gap: 24px !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  #certificate li {
+    font-size: 9.5pt !important;
+    color: #2a2a2a !important;
+    text-align: left !important;
+    margin-bottom: 4px !important;
+    list-style: none !important;
+    padding-left: 12px !important;
+    position: relative !important;
+  }
+
+  #certificate li::before {
+    content: "•" !important;
+    color: #e8806e !important;                  /* 코랄 불릿 */
+    position: absolute !important;
+    left: 0 !important;
+    font-weight: 700 !important;
+  }
+
+  #interview strong {
+    font-size: 9.5pt !important;
+    color: #c25a48 !important;                  /* 질문은 코랄로 강조 */
+    display: block !important;
+    margin-bottom: 4px !important;
+  }
+
+  #interview p {
+    font-size: 9pt !important;
+    color: #3a3a3a !important;
+    line-height: 1.65 !important;
+    margin-bottom: 10px !important;
+  }
+
+  #interview br + br {
+    display: none !important;
+  }
+
+  /* ===== Archiving — URL을 텍스트로 노출 ===== */
+  .archiving-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    align-items: flex-start !important;
+    margin: 0 !important;
+  }
+
+  .archiving-item {
+    display: inline-block !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    color: #2a2a2a !important;
+    width: auto !important;
+    text-decoration: none !important;
+    font-size: 9pt !important;
+  }
+
+  .archiving-item img {
+    display: none !important;
+  }
+
+  .archiving-item span {
+    font-weight: 600 !important;
+    color: #c25a48 !important;                  /* GitHub/Notion 라벨도 코랄로 강조 */
+    margin-right: 8px !important;
+  }
+
+  .archiving-item::after {
+    content: " " attr(href) !important;
+    color: #666 !important;
+    font-size: 8.5pt !important;
+    word-break: break-all !important;
+  }
+
+  /* ===== Images ===== */
+  img {
+    filter: none !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border: none !important;
+  }
+
+  /* ===== Page break helpers ===== */
+  section {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  .page-break {
+    page-break-before: always;
+    break-before: always;
+  }
+}
