@@ -339,9 +339,41 @@
                     <span class="badge">Kakao Map API</span>
                 </div>
                 <div class="projects-actions">
-                    <a class="projects-button" href="https://github.com/sumin020415/project_2" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <!-- <a class="projects-button" href="https://github.com/sumin020415/project_2" target="_blank" rel="noopener noreferrer">GitHub</a> -->
                     <a class="projects-button" href="https://rare-mountain-b86.notion.site/213a450b75e1801ca61af690bec2a6dc" target="_blank" rel="noopener noreferrer">자세히 보기</a>
                     <button class="projects-button" onclick="openVideoModal('videos/project2.mp4')">영상보기</button>
+                </div>
+            </div>
+
+            <!-- 사이드 프로젝트 - 안밤 재구현 (TypeScript + Supabase) -->
+            <div class="projects-card">
+                <div class="projects-tag">사이드 프로젝트 (재구현)</div>
+                <h3>안밤 (ANBAM) - Next.js + Supabase 재구현</h3>
+                <div class="projects-description">
+                    <strong>1인 풀스택 사이드 프로젝트</strong><br />
+                    Spring + Oracle 팀 프로젝트를 <strong>TypeScript + Supabase + Vercel</strong> 로 재구현. 무료 24시간 동작하는 라이브 데모 + 모바일(RN) 이식 대비 설계.
+                    <ul class="projects-bullets">
+                        <li><strong>인증 단순화:</strong> JWT/Spring Security 자체 구현 → Supabase Auth + PostgreSQL RLS 로 대체 (보안 코드 약 80% 감소).</li>
+                        <li><strong>지도 + 공공데이터:</strong> Kakao Map 위에 부산 CCTV 3,017 + 보안등 37 + 시민 제보 핀 표시. data.go.kr OpenAPI 시드 스크립트 (streaming INSERT + 5xx retry + page skip 패턴).</li>
+                        <li><strong>풀스택 TS:</strong> Next.js 16 App Router (RSC) + Tailwind v4 (`@theme` 디자인 토큰) + react-hook-form + zod 일관 적용.</li>
+                        <li><strong>RN 이식 대비:</strong> 모든 DB 쿼리를 <code>lib/services/*.ts</code> 로 분리 → React Native 클라이언트 추가 시 services/schemas 폴더 그대로 이동.</li>
+                        <li><strong>운영 안정성:</strong> Storage RLS path 정합, PKCE 비밀번호 재설정, streaming INSERT 로 중간 실패 대응 등 실제 함정 다수 해결.</li>
+                    </ul>
+                </div>
+                <div class="projects-badges">
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">Next.js 16</span>
+                    <span class="badge">Tailwind v4</span>
+                    <span class="badge">Supabase</span>
+                    <span class="badge">PostgreSQL + RLS</span>
+                    <span class="badge">Kakao Map</span>
+                    <span class="badge">React Hook Form</span>
+                    <span class="badge">Zod</span>
+                    <span class="badge">Vercel</span>
+                </div>
+                <div class="projects-actions">
+                    <a class="projects-button" href="https://anbam.vercel.app" target="_blank" rel="noopener noreferrer">라이브 데모</a>
+                    <a class="projects-button" href="https://github.com/sumin020415/anbam" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
 
