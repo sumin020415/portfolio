@@ -287,6 +287,41 @@
                 </div>
             </div>
 
+                        <!-- 사이드 프로젝트 - 안밤 재구현 (TypeScript + Supabase) -->
+            <div class="projects-card">
+                <div class="projects-tag">사이드 프로젝트 (재구현)</div>
+                <h3>안밤 (ANBAM) - Next.js + Supabase 재구현</h3>
+                <div class="projects-description">
+                    <strong>1인 풀스택 사이드 프로젝트</strong><br />
+                    Spring + Oracle 팀 프로젝트를 <strong>TypeScript + Supabase + Vercel</strong> 로 재구현. 무료 24시간 동작하는 라이브 데모 + 모바일(RN) 이식 대비 설계.
+                    <ul class="projects-bullets">
+                        <li><strong>인증 단순화:</strong> JWT/Spring Security 자체 구현 → Supabase Auth + PostgreSQL RLS 로 대체 (보안 코드 약 80% 감소).</li>
+                        <li><strong>지도 + 공공데이터:</strong> Kakao Map 위에 부산 CCTV 15,277 + 보안등 68,168 + 시민 제보 핀. 3단 줌 클러스터링(자치구/동/개별) + Kakao Local API 로 자치구·동 좌표 보정.</li>
+                        <li><strong>성능 최적화:</strong> 메인 지도 풀 fetch(6MB) → PostgreSQL RPC 카운트(95KB, <strong>63x 감소</strong>) + viewport bbox fetch 로 모바일 메모리 튕김 해결. <strong>Lighthouse 성능 95 / LCP 1.1s</strong>.</li>
+                        <li><strong>데이터 분석:</strong> Chart.js + 부산 SVG 로 자치구별 제보·안전 인프라·안전 점수 시각화 (인구 대비 CCTV/보안등 비율).</li>
+                        <li><strong>풀스택 TS:</strong> Next.js 16 App Router (RSC) + Tailwind v4 (`@theme` 디자인 토큰) + react-hook-form + zod 일관 적용.</li>
+                        <li><strong>RN 이식 대비:</strong> 모든 DB 쿼리를 <code>lib/services/*.ts</code> 로 분리 → React Native 클라이언트 추가 시 services/schemas 폴더 그대로 이동.</li>
+                    </ul>
+                </div>
+                <div class="projects-badges">
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">Next.js 16</span>
+                    <span class="badge">Tailwind v4</span>
+                    <span class="badge">Supabase</span>
+                    <span class="badge">PostgreSQL + RLS</span>
+                    <span class="badge">Kakao Map</span>
+                    <span class="badge">Chart.js</span>
+                    <span class="badge">React Hook Form</span>
+                    <span class="badge">Zod</span>
+                    <span class="badge">Vercel</span>
+                </div>
+                <div class="projects-actions">
+                    <a class="projects-button" href="https://anbam.vercel.app" target="_blank" rel="noopener noreferrer">라이브 데모</a>
+                    <a class="projects-button" href="https://github.com/sumin020415/anbam" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="projects-button" href="https://fate-waiter-a74.notion.site/2b45ea02823a811f8e7acaddce6caa91?p=36c5ea02823a80389af8c734ef89e611&pm=c" target="_blank" rel="noopener noreferrer">개발 로그</a>
+                </div>
+            </div>
+
             <!-- 자바과정 프로젝트 1 -->
             <div class="projects-card">
                 <div class="projects-tag">자바과정 프로젝트 (1)</div>
@@ -345,38 +380,6 @@
                 </div>
             </div>
 
-            <!-- 사이드 프로젝트 - 안밤 재구현 (TypeScript + Supabase) -->
-            <div class="projects-card">
-                <div class="projects-tag">사이드 프로젝트 (재구현)</div>
-                <h3>안밤 (ANBAM) - Next.js + Supabase 재구현</h3>
-                <div class="projects-description">
-                    <strong>1인 풀스택 사이드 프로젝트</strong><br />
-                    Spring + Oracle 팀 프로젝트를 <strong>TypeScript + Supabase + Vercel</strong> 로 재구현. 무료 24시간 동작하는 라이브 데모 + 모바일(RN) 이식 대비 설계.
-                    <ul class="projects-bullets">
-                        <li><strong>인증 단순화:</strong> JWT/Spring Security 자체 구현 → Supabase Auth + PostgreSQL RLS 로 대체 (보안 코드 약 80% 감소).</li>
-                        <li><strong>지도 + 공공데이터:</strong> Kakao Map 위에 부산 CCTV 3,017 + 보안등 37 + 시민 제보 핀 표시. data.go.kr OpenAPI 시드 스크립트 (streaming INSERT + 5xx retry + page skip 패턴).</li>
-                        <li><strong>풀스택 TS:</strong> Next.js 16 App Router (RSC) + Tailwind v4 (`@theme` 디자인 토큰) + react-hook-form + zod 일관 적용.</li>
-                        <li><strong>RN 이식 대비:</strong> 모든 DB 쿼리를 <code>lib/services/*.ts</code> 로 분리 → React Native 클라이언트 추가 시 services/schemas 폴더 그대로 이동.</li>
-                        <li><strong>운영 안정성:</strong> Storage RLS path 정합, PKCE 비밀번호 재설정, streaming INSERT 로 중간 실패 대응 등 실제 함정 다수 해결.</li>
-                    </ul>
-                </div>
-                <div class="projects-badges">
-                    <span class="badge">TypeScript</span>
-                    <span class="badge">Next.js 16</span>
-                    <span class="badge">Tailwind v4</span>
-                    <span class="badge">Supabase</span>
-                    <span class="badge">PostgreSQL + RLS</span>
-                    <span class="badge">Kakao Map</span>
-                    <span class="badge">React Hook Form</span>
-                    <span class="badge">Zod</span>
-                    <span class="badge">Vercel</span>
-                </div>
-                <div class="projects-actions">
-                    <a class="projects-button" href="https://anbam.vercel.app" target="_blank" rel="noopener noreferrer">라이브 데모</a>
-                    <a class="projects-button" href="https://github.com/sumin020415/anbam" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-
             <!-- 개인 프로젝트 - Python 데이터 작업 -->
             <div class="projects-card">
                 <div class="projects-tag">개인 프로젝트</div>
@@ -387,7 +390,7 @@
                         <li><strong>분석·시각화:</strong> Pandas/Seaborn/Matplotlib + folium 지도. KOSIS·부산공공·행안부 데이터 처리.</li>
                         <li><strong>크롤링:</strong> Selenium WebDriverWait/ActionChains + BeautifulSoup. .env 자격분리, 페이지네이션·드롭다운·동적 로딩 대응.</li>
                         <li><strong>빅데이터 환경:</strong> Hadoop HDFS에서 데이터 적재·읽기·전처리.</li>
-                        <li><strong>결합 분석:</strong> 부산 인구통계 × 스타벅스 매장 분포 연관성 등 단순 수집을 넘는 인사이트 시도.</li>
+                        <li><strong>결합 분석:</strong> 부산 인구통계 x 스타벅스 매장 분포 연관성 등 단순 수집을 넘는 인사이트 시도.</li>
                     </ul>
                 </div>
                 <div class="projects-badges">
