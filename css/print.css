@@ -36,7 +36,7 @@
     padding: 0 !important;
   }
 
-  /* ===== Sidebar (About Me) — top header ===== */
+  /* ===== Sidebar (About Me) - top header ===== */
   .sidebar {
     position: static !important;
     width: 100% !important;
@@ -116,7 +116,7 @@
     width: 90px !important;
     height: 90px !important;
     border: 2px solid #e8806e !important;        /* 코랄 액센트 보더 */
-    border-radius: 50% !important;               /* 원형 — 인간미 */
+    border-radius: 50% !important;               /* 원형 - 인간미 */
     box-shadow: none !important;
     margin: 0 !important;
     object-fit: cover !important;
@@ -140,7 +140,7 @@
 
   h2 {
     font-size: 13pt !important;
-    text-transform: none !important;            /* 대문자 강제 제거 — 한국어/영문 자연스럽게 */
+    text-transform: none !important;            /* 대문자 강제 제거 - 한국어/영문 자연스럽게 */
     letter-spacing: 0 !important;
     border-bottom: 2px solid #e8806e !important; /* 회색 진한 줄 → 코랄 액센트 */
     padding-bottom: 4px !important;
@@ -210,7 +210,7 @@
     gap: 6px !important;
   }
 
-  /* Tag — 코랄 액센트 + 부드러운 박스 */
+  /* Tag - 코랄 액센트 + 부드러운 박스 */
   .projects-tag {
     position: static !important;
     display: inline-block !important;
@@ -242,7 +242,7 @@
     margin: 2px 0 4px !important;
   }
 
-  /* Badges — 부드러운 베이지 outline */
+  /* Badges - 부드러운 베이지 outline */
   .projects-badges {
     gap: 4px !important;
     margin: 2px 0 !important;
@@ -267,7 +267,7 @@
     gap: 0 !important;
   }
 
-  /* span 형태 (예: 사내 프로젝트 비공개 라벨) — 작게 텍스트로만 */
+  /* span 형태 (예: 사내 프로젝트 비공개 라벨) - 작게 텍스트로만 */
   span.projects-button {
     display: inline-block !important;
     background: transparent !important;
@@ -279,12 +279,12 @@
     opacity: 1 !important;
   }
 
-  /* JS-only 버튼 (이미지/영상보기/Book) — 인쇄에서 무의미하므로 숨김 */
+  /* JS-only 버튼 (이미지/영상보기/Book) - 인쇄에서 무의미하므로 숨김 */
   button.projects-button {
     display: none !important;
   }
 
-  /* 외부 링크 a 태그 — URL을 텍스트로 노출 */
+  /* 외부 링크 a 태그 - URL을 텍스트로 노출 */
   a.projects-button {
     display: inline !important;
     background: transparent !important;
@@ -349,7 +349,7 @@
     display: none !important;
   }
 
-  /* ===== Archiving — URL을 텍스트로 노출 ===== */
+  /* ===== Archiving - URL을 텍스트로 노출 ===== */
   .archiving-container {
     display: flex !important;
     flex-direction: column !important;

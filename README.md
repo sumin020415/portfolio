@@ -6,7 +6,7 @@
 📄 **PDF 이력서** : 사이트 우측 상단 📄 버튼으로 즉시 인쇄/저장
 📝 **Notion 아카이브** : https://rare-mountain-b86.notion.site/20da450b75e18047a530ea706ef4c93a
 
-<!-- TODO: 미리보기 GIF 1장 추가 — 사이트 한 번 훑는 30~60초 GIF면 충분 -->
+<!-- TODO: 미리보기 GIF 1장 추가 - 사이트 한 번 훑는 30~60초 GIF면 충분 -->
 ![preview](docs/preview.gif)
 
 ---
@@ -27,14 +27,14 @@
 
 ## ✨ Features
 
-- 🌗 **다크 / 라이트 테마 토글** — `localStorage` + `prefers-color-scheme` 기반 초기값. 이미지 아이콘은 `--img-filter: invert()` 토큰으로 자동 반전.
-- 🎬 **모달 3종** — 영상 / 이미지 슬라이더 / 책 뷰어. 모두 ESC · 방향키 · 바깥 클릭 닫기 지원.
-- 📚 **책 뷰어** — Pandas/Selenium 학습 산출물 18권을 PDF → 페이지 JPG로 변환해 책처럼 넘겨볼 수 있는 모달. ⭐ 추천 권 표시(`data-best`) 및 카테고리별 그라데이션 표지.
-- 🎯 **스킬 탭 필터** — Frontend / Backend / Database / DevOps / Data·ML / Collab·Design 6개 카테고리. hover·click 듀얼 인터랙션.
-- ✍️ **타이핑 인트로** — TypeIt으로 한 줄 자기소개 애니메이션.
-- 📄 **PDF 인쇄** — `window.print()` + 전용 `print.css`로 별도 라이브러리 없이 처리.
-- 📱 **반응형 3단계** — 1024 / 768 / 480 브레이크포인트. 모바일에서 사이드바 적층, 480 이하에서 책 카드 4단 압축.
-- ♿ **접근성** — `aria-label`, `rel="noopener noreferrer"`, 키보드 내비게이션, `@media (hover: hover)` 분기로 터치 환경 어색함 제거.
+- 🌗 **다크 / 라이트 테마 토글** - `localStorage` + `prefers-color-scheme` 기반 초기값. 이미지 아이콘은 `--img-filter: invert()` 토큰으로 자동 반전.
+- 🎬 **모달 3종** - 영상 / 이미지 슬라이더 / 책 뷰어. 모두 ESC · 방향키 · 바깥 클릭 닫기 지원.
+- 📚 **책 뷰어** - Pandas/Selenium 학습 산출물 18권을 PDF → 페이지 JPG로 변환해 책처럼 넘겨볼 수 있는 모달. ⭐ 추천 권 표시(`data-best`) 및 카테고리별 그라데이션 표지.
+- 🎯 **스킬 탭 필터** - Frontend / Backend / Database / DevOps / Data·ML / Collab·Design 6개 카테고리. hover·click 듀얼 인터랙션.
+- ✍️ **타이핑 인트로** - TypeIt으로 한 줄 자기소개 애니메이션.
+- 📄 **PDF 인쇄** - `window.print()` + 전용 `print.css`로 별도 라이브러리 없이 처리.
+- 📱 **반응형 3단계** - 1024 / 768 / 480 브레이크포인트. 모바일에서 사이드바 적층, 480 이하에서 책 카드 4단 압축.
+- ♿ **접근성** - `aria-label`, `rel="noopener noreferrer"`, 키보드 내비게이션, `@media (hover: hover)` 분기로 터치 환경 어색함 제거.
 
 ---
 
