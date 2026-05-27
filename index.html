@@ -296,6 +296,7 @@
                     Spring + Oracle 팀 프로젝트를 <strong>TypeScript + Supabase + Vercel</strong> 로 재구현. 무료 24시간 동작하는 라이브 데모 + 모바일(RN) 이식 대비 설계.
                     <ul class="projects-bullets">
                         <li><strong>인증 단순화:</strong> JWT/Spring Security 자체 구현 → Supabase Auth + PostgreSQL RLS 로 대체 (보안 코드 약 80% 감소).</li>
+                        <li><strong>커뮤니티 완성도:</strong> 게시판(검색·5종 정렬·조회수·작성자 아바타) + 댓글·대댓글 + 신고/문의 → 관리자 검토·답변 워크플로(<code>is_admin</code> RLS) + 마이페이지 허브(프로필·아바타·비밀번호 변경·활동 요약). 원본 팀 프로젝트엔 없던 기능을 추가 구현.</li>
                         <li><strong>지도 + 공공데이터:</strong> Kakao Map 위에 부산 CCTV 15,277 + 보안등 68,168 + 시민 제보 핀. 3단 줌 클러스터링(자치구/동/개별) + Kakao Local API 로 자치구·동 좌표 보정.</li>
                         <li><strong>성능 최적화:</strong> 메인 지도 풀 fetch(6MB) → PostgreSQL RPC 카운트(95KB, <strong>63x 감소</strong>) + viewport bbox fetch 로 모바일 메모리 튕김 해결. <strong>Lighthouse 성능 95 / LCP 1.1s</strong>.</li>
                         <li><strong>데이터 분석:</strong> Chart.js + 부산 SVG 로 자치구별 제보·안전 인프라·안전 점수 시각화 (인구 대비 CCTV/보안등 비율).</li>
